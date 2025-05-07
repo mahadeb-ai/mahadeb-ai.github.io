@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,6 +15,29 @@
             margin: 0 auto; /* Centers content horizontally */
             padding: 0 2rem; /* Adds left and right space */
         }
+
+        .footer-icons {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        .footer-icons .icon {
+              display: inline-block;
+              margin: 0 10px;
+              width: 40px;
+              height: 40px;
+              line-height: 40px;
+              border-radius: 50%;
+              background-color: #e0e0e0;
+              color: #333;
+              text-align: center;
+              font-size: 18px;
+              transition: all 0.3s ease;
+              text-decoration: none;
+            }
+        .footer-icons .icon:hover {
+              background-color: #2563eb;
+              color: white;
+            }
 
         nav ul {
             list-style: none;
@@ -54,6 +78,11 @@
         {{ content }}
 
         <footer>
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="icon scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.researchgate.net/profile/YOUR_NAME" target="_blank" class="icon rg"><i class="fab fa-researchgate"></i></a>
+            </div>
             <p>&copy; 2025 Mahadeb Mandal &nbsp;|&nbsp; Built with ❤️ using GitHub Pages & Jekyll</p>
         </footer>
     </div>
