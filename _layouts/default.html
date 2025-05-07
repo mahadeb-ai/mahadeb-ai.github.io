@@ -5,99 +5,112 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
-              margin: 0;
-              font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-              background: linear-gradient(to bottom, #f3f4f6, #e0f2fe); /* light gray to pale blue */
-              color: #111827;
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #f3f4f6, #e0f2fe); /* soft background */
+            color: #111827;
+        }
+
+        .page-frame {
+            margin: 30px; /* Outer margin */
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto; /* Centers content horizontally */
-            padding: 0 1rem; /* Adds left and right space */
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            background: linear-gradient(to right, #1e3a8a, #2563eb); /* header */
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #dbeafe;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            background: transparent;
+        }
+
+        footer {
+            background: linear-gradient(to right, #cbd5e1, #93c5fd); /* soft blend */
+            padding: 1.5rem 2rem;
+            text-align: center;
+            color: #1e293b;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
         }
 
         .footer-icons {
             text-align: center;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
         .footer-icons .icon {
-              display: inline-block;
-              margin: 0 10px;
-              width: 40px;
-              height: 40px;
-              line-height: 40px;
-              border-radius: 50%;
-              background-color: #e0e7ff;
-              color: #1e3a8a;
-              text-align: center;
-              font-size: 18px;
-              transition: all 0.3s ease;
-              text-decoration: none;
-            }
+            display: inline-block;
+            margin: 0 10px;
+            width: 42px;
+            height: 42px;
+            line-height: 42px;
+            border-radius: 50%;
+            background-color: #e0e7ff;
+            color: #1e3a8a;
+            text-align: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
         .footer-icons .icon:hover {
-              background-color: #1e3a8a;
-              color: white;
-            }
-        nav {
-              background: linear-gradient(to right, #1e3a8a, #2563eb); /* dark indigo to vibrant blue */
-              padding: 1rem 2rem;
-              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-        nav ul {
-              list-style: none;
-              display: flex;
-              justify-content: center;
-              gap: 2rem;
-              margin: 0;
-              padding: 0;
-            }
+            background-color: #1e3a8a;
+            color: white;
+        }
 
-        nav ul li a {
-              color: white;
-              text-decoration: none;
-              font-weight: 600;
-              transition: color 0.3s ease;
-            }
-        nav ul li a:hover {
-              color: #dbeafe;
-            }
-        main {
-              max-width: 900px;
-              margin: 2rem auto;
-              padding: 0 2rem;
-              background: transparent; /* lets gradient flow naturally */
-            }
-        footer {
-              background: linear-gradient(to right, #cbd5e1, #93c5fd); /* soft gray-blue blend */
-              padding: 1rem 2rem;
-              text-align: center;
-              color: #1e293b;
-              box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
-              margin-top: 4rem;
-            }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <ul>
-                {% for item in site.nav %}
-                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </nav>
+    <div class="page-frame">
+        <div class="container">
+            <nav>
+                <ul>
+                    {% for item in site.nav %}
+                    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </nav>
 
-        {{ content }}
+            <main>
+                {{ content }}
+            </main>
 
-        <footer>
-            <div class="footer-icons">
-                <a href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="icon scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://www.researchgate.net/profile/YOUR_NAME" target="_blank" class="icon rg"><i class="fab fa-researchgate"></i></a>
-            </div>
-            <p>&copy; 2025 Mahadeb Mandal &nbsp;|&nbsp; Welcome to my webpage!</p>
-        </footer>
+            <footer>
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="icon"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://www.researchgate.net/profile/YOUR_NAME" target="_blank" class="icon"><i class="fab fa-researchgate"></i></a>
+                </div>
+                <p>&copy; 2025 Mahadeb Mandal &nbsp;|&nbsp; Welcome to my webpage!</p>
+            </footer>
+        </div>
     </div>
 </body>
 </html>
