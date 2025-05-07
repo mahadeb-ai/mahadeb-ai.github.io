@@ -8,6 +8,6 @@ nav:
   - title: "Home"
     url: /
   - title: "Publications"
-    url: /publications/
+    url: /_pages/publications/
   - title: "Teaching"
-    url: /teaching/
+    url: /_pages/teaching/
