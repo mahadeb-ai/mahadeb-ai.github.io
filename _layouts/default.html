@@ -5,9 +5,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+              margin: 0;
+              font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+              background: linear-gradient(to bottom, #f3f4f6, #e0f2fe); /* light gray to pale blue */
+              color: #111827;
         }
 
         .container {
@@ -27,42 +28,54 @@
               height: 40px;
               line-height: 40px;
               border-radius: 50%;
-              background-color: #e0e0e0;
-              color: #333;
+              background-color: #e0e7ff;
+              color: #1e3a8a;
               text-align: center;
               font-size: 18px;
               transition: all 0.3s ease;
               text-decoration: none;
             }
         .footer-icons .icon:hover {
-              background-color: #2563eb;
+              background-color: #1e3a8a;
               color: white;
             }
-
+        nav {
+              background: linear-gradient(to right, #1e3a8a, #2563eb); /* dark indigo to vibrant blue */
+              padding: 1rem 2rem;
+              box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
         nav ul {
-            list-style: none;
-            padding: 1rem;
-            margin: 0;
-            background-color: #f4f4f4;
-            text-align: center;
-        }
+              list-style: none;
+              display: flex;
+              justify-content: center;
+              gap: 2rem;
+              margin: 0;
+              padding: 0;
+            }
 
-        nav ul li {
-            display: inline;
-            margin: 0 1rem;
-        }
-
+        nav ul li a {
+              color: white;
+              text-decoration: none;
+              font-weight: 600;
+              transition: color 0.3s ease;
+            }
+        nav ul li a:hover {
+              color: #dbeafe;
+            }
+        main {
+              max-width: 900px;
+              margin: 2rem auto;
+              padding: 0 2rem;
+              background: transparent; /* lets gradient flow naturally */
+            }
         footer {
-            text-align: center;
-            padding: 1rem 0;
-            background-color: #f9f9f9;
-            font-size: 0.9rem;
-            color: #555;
-            border-top: 1px solid #e0e0e0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
+              background: linear-gradient(to right, #cbd5e1, #93c5fd); /* soft gray-blue blend */
+              padding: 1rem 2rem;
+              text-align: center;
+              color: #1e293b;
+              box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+              margin-top: 4rem;
+            }
     </style>
 </head>
 <body>
@@ -83,7 +96,7 @@
                 <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" class="icon scholar"><i class="fas fa-graduation-cap"></i></a>
                 <a href="https://www.researchgate.net/profile/YOUR_NAME" target="_blank" class="icon rg"><i class="fab fa-researchgate"></i></a>
             </div>
-            <p>&copy; 2025 Mahadeb Mandal &nbsp;|&nbsp; Built with ❤️ using GitHub Pages & Jekyll</p>
+            <p>&copy; 2025 Mahadeb Mandal &nbsp;|&nbsp; Welcome to my webpage!</p>
         </footer>
     </div>
 </body>
