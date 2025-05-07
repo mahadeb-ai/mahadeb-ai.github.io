@@ -5,7 +5,7 @@ title: Home
 
 # Mahadeb Mandal
 
-![Profile Photo](assets/images/profile.jpg){: width="200" }
+![Profile Photo](assets/images/profile.png){: width="200" }
 
 Assistant Professor  
 Department of Mathematics  
