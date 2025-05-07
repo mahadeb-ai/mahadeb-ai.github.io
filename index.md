@@ -44,13 +44,23 @@ I am a research scholar at NTU Singapore, exploring the intersection of **topolo
 
 ---
 
-## 📬 Contact
+## 📫 Get in Touch
 
-- 📧 Email: [wbmm2017@gmail.com](mailto:wbmm2017@gmail.com) | [mahadeb001@e.ntu.edu.sg](mailto:mahadeb001@e.ntu.edu.sg)  
-- 📍 Office: [ Lab Office: SPMS-MAS-04-02, Table: 9, School of Physical & Mathematical Sciences, Nanyang Technological University, 21 Nanyang Link, Singapore 637371]  
-- 📱 Phone: +65 94XX XX12  
-- 🔗 [GitHub](https://github.com/your-username) | [LinkedIn](https://linkedin.com/in/your-profile) *(Optional)*
+**📧 Email**  
+[wbmm2017@gmail.com](mailto:wbmm2017@gmail.com)  
+[mahadeb001@e.ntu.edu.sg](mailto:mahadeb001@e.ntu.edu.sg)
 
+**📍 Office Address**  
+Lab Office: SPMS-MAS-04-02, Table 9  
+School of Physical & Mathematical Sciences  
+Nanyang Technological University  
+21 Nanyang Link, Singapore 637371
+
+**📱 Phone**  
++65 94XX XX12
+
+**🔗 Online Profiles**  
+[GitHub](https://github.com/your-username) · [LinkedIn](https://linkedin.com/in/your-profile)
 ---
 
 <style>
