@@ -2,7 +2,10 @@ title: "Mahadeb Mandal"
 description: "Academic Webpage!"
 baseurl: "" 
 url: "https://mahadeb-ai.github.io"
-
+theme: minima
+plugins:
+  - jekyll-feed
+  
 # Navigation
 nav:
   - title: "Home"
