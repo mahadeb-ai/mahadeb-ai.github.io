@@ -1,34 +1,61 @@
 ---
 layout: home
-title: Home
+title: Mahadeb Mandal
 ---
 
-# Mahadeb Mandal
+<div align="center">
+  <img src="assets/images/profile.png" alt="Profile Photo" width="180" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
+  
+  # Mahadeb Mandal
 
-![Profile Photo](assets/images/profile.png){: width="200" }
+  **Research Scholar**  
+  Interdisciplinary Graduate College  
+  **Nanyang Technological University, Singapore**
+</div>
 
-Research Scholar  
-Interdisciplinary Graduate College  
-Nanyang Technological University, Singapore  
+---
 
-## About Me
+## 👨‍💼 About Me
+I am a research scholar at NTU Singapore, exploring the intersection of **topological data analysis**, **applied mathematics**, and **deep learning** to solve modern challenges in materials science and AI.
 
-Write your introduction here...
+---
 
-## Education
+## 🎓 Education
 
-- Ph.D., Artificial Intelligence, Nanyang Technological University(NTU), Singapore, August 2024- Present.
-- M.Sc., Mathematics, Indian Institute of Technology(IIT) Bombay, July 2022 - May 2024.
-- B.Sc., Mathematics, Midnapore College (Autonomous), Vidyasagar University, June 2019- June 2022.
+- **Ph.D. in Artificial Intelligence**  
+  *Nanyang Technological University (NTU), Singapore*  
+  *Aug 2024 – Present*
 
-## Research Interests
+- **M.Sc. in Mathematics**  
+  *Indian Institute of Technology (IIT) Bombay*  
+  *Jul 2022 – May 2024*
 
-- Topological Data Analysis
-- Applied Mathematics
-- Deep Learning
+- **B.Sc. in Mathematics**  
+  *Midnapore College (Autonomous), Vidyasagar University*  
+  *Jun 2019 – Jun 2022*
 
-## Contact
+---
 
-- Email: [wbmm2017@gmail.com](mailto:wbmm2017@gmail.com),[mahadeb001@e.ntu.edu.sg](mailto:mahadeb001@e.ntu.edu.sg) 
-- Office: Your Office Location
-- Phone: +65 94XX XX12
+## 🧠 Research Interests
+
+- Topological Data Analysis (TDA)  
+- Machine Learning & Deep Learning  
+- Applied and Computational Mathematics
+
+---
+
+## 📬 Contact
+
+- 📧 Email: [wbmm2017@gmail.com](mailto:wbmm2017@gmail.com) | [mahadeb001@e.ntu.edu.sg](mailto:mahadeb001@e.ntu.edu.sg)  
+- 📍 Office: [Your Office Location]  
+- 📱 Phone: +65 94XX XX12  
+- 🔗 [GitHub](https://github.com/your-username) | [LinkedIn](https://linkedin.com/in/your-profile) *(Optional)*
+
+---
+
+<style>
+h2 {
+  margin-top: 2.5rem;
+  color: #2563eb;
+}
+</style>
