@@ -7,9 +7,9 @@ title: Home
 
 ![Profile Photo](assets/images/profile.png){: width="200" }
 
-Assistant Professor  
-Department of Mathematics  
-Your University  
+Research Scholar  
+Interdisciplinary Graduate College  
+Nanyang Technological University, Singapore  
 
 ## About Me
 
@@ -17,18 +17,18 @@ Write your introduction here...
 
 ## Education
 
-- Ph.D., Mathematics, University Name, Year
-- M.Sc., Mathematics, University Name, Year
-- B.Sc., Mathematics, University Name, Year
+- Ph.D., Artificial Intelligence, Nanyang Technological University(NTU), Singapore, August 2024- Present.
+- M.Sc., Mathematics, Indian Institute of Technology(IIT) Bombay, July 2022 - May 2024.
+- B.Sc., Mathematics, Midnapore College (Autonomous), Vidyasagar University, June 2019- June 2022.
 
 ## Research Interests
 
-- Interest 1
-- Interest 2
-- Interest 3
+- Topological Data Analysis
+- Applied Mathematics
+- Deep Learning
 
 ## Contact
 
-- Email: [your.email@example.com](mailto:your.email@example.com)
+- Email: [wbmm2017@gmail.com](mailto:wbmm2017@gmail.com),[mahadeb001@e.ntu.edu.sg](mailto:mahadeb001@e.ntu.edu.sg) 
 - Office: Your Office Location
-- Phone: +XX XXXX XXX XXX
+- Phone: +65 94XX XX12
