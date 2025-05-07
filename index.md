@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-<div style="max-width: 850px; margin: auto; padding: 2rem;">
 <div align="center">
   <img src="assets/images/profile.png" alt="Profile Photo" width="180" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
   
@@ -50,7 +49,6 @@ I am a research scholar at NTU Singapore, exploring the intersection of **topolo
 - 📱 Phone: +65 94XX XX12  
 - 🔗 [GitHub](https://github.com/your-username) |[LinkedIn](https://www.linkedin.com/in/mahadeb-mandal-5486a726b/)
 
-</div>
 
 <style>
 h2 {
