@@ -1,9 +1,13 @@
-title: Mahadeb Mandal
-email: wbmm2017@gmail.com
-description: >- 
-  Academic website of Mahadeb Mandal
-baseurl: ""
+title: "Mahadeb Mandal"
+description: "Academic Webpage!"
+baseurl: "" 
 url: "https://mahadeb-ai.github.io"
-theme: minima
-plugins:
-  - jekyll-feed
+
+# Navigation
+nav:
+  - title: "Home"
+    url: /
+  - title: "Publications"
+    url: /publications/
+  - title: "Teaching"
+    url: /teaching/
