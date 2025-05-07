@@ -6,7 +6,7 @@ permalink: /cv/
 
 ## Academic Position
 
-- **Non-Graduating PhD Exchange Fellow**, National University of Singapore (NUS)  
+- **Non-Graduating PhD Exchange Fellow**, National University of Singapore (NUS), Singapore  
   *Jan 2025 – May 2025*
 
 - **PhD Scholar**, Interdisciplinary Graduate College, Nanyang Technological University (NTU), Singapore  
@@ -14,23 +14,22 @@ permalink: /cv/
 
 ---
 
-## Education
+## 🎓 Education
 
-- **Doctor of Philosophy**  
-  *2024–Present*  
-  PhD in Artificial Intelligence, Nanyang Technological University (NTU), Singapore  
-  **Advisor:** Prof. Kelin Xia
+- **Ph.D. in Artificial Intelligence**  
+  *Nanyang Technological University (NTU), Singapore*  
+  *Aug 2024 – Present*
 
-- **Master of Science**  
-  *2022–2024*  
-  M.Sc. in Mathematics, Department of Mathematics, Indian Institute of Technology Bombay, Mumbai, India  
-  **Advisor:** Prof. Kummari Mallesham
+- **M.Sc. in Mathematics**  
+  *Indian Institute of Technology (IIT) Bombay, India*  
+  *Jul 2022 – May 2024*
 
-- **Bachelor of Science**  
-  *2019–2022*  
-  B.Sc. in Mathematics, Department of Mathematics, Midnapore College (Autonomous), Vidyasagar University, India
+- **B.Sc. in Mathematics**  
+  *Midnapore College (Autonomous), Vidyasagar University, India*  
+  *Jun 2019 – Jun 2022*
 
 ---
+
 
 ## Awards
 
