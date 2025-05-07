@@ -1,15 +1,14 @@
 ---
-layout: page
+layout: default
 title: Teaching
 permalink: /teaching/
 ---
 
-## Current Courses
+# 📚 Teaching
 
-- Course Name 1 (Course Code)
-- Course Name 2 (Course Code)
+As part of my academic journey, I've had the privilege to contribute to various teaching and mentoring activities.
 
-## Previous Courses
+## Courses Assisted
 
-- Past Course 1
-- Past Course 2
+- **TBA** 
+
