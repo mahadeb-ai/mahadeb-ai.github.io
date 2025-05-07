@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 ---
 <div style="max-width: 850px; margin: auto; padding: 2rem;">
 <div align="center">
