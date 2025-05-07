@@ -49,7 +49,7 @@ I am a research scholar at NTU Singapore, exploring the intersection of **topolo
 - 📍 Office: SPMS-MAS-04-02, Table: 9, School of Physical & Mathematical Sciences, 21 Nanyang Link, Singapore 637371 
 - 📱 Phone: +65 94XX XX12  
 - 🔗 [GitHub](https://github.com/your-username) |[LinkedIn](https://www.linkedin.com/in/mahadeb-mandal-5486a726b/)
-
+</div>
 <style>
 h2 {
   margin-top: 2.5rem;
