@@ -44,15 +44,8 @@ I am a research scholar at NTU Singapore, exploring the intersection of **topolo
 
 ## 📬 Contact
 
-- 📧 Email: [wbmm2017@gmail.com](mailto:wbmm2017@gmail.com) | [mahadeb001@e.ntu.edu.sg](mailto:mahadeb001@e.ntu.edu.sg)  
+- 📧 Email: [wbmm2017@gmail.com](mailto:wbmm2017@gmail.com),  [mahadeb001@e.ntu.edu.sg](mailto:mahadeb001@e.ntu.edu.sg)  
 - 📍 Office: SPMS-MAS-04-02, Table: 9, School of Physical & Mathematical Sciences, 21 Nanyang Link, Singapore 637371 
 - 📱 Phone: +65 94XX XX12  
 - 🔗 [GitHub](https://github.com/your-username) |[LinkedIn](https://www.linkedin.com/in/mahadeb-mandal-5486a726b/)
 
-
-<style>
-h2 {
-  margin-top: 2.5rem;
-  color: #2563eb;
-}
-</style>
