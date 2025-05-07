@@ -16,7 +16,7 @@ title: Home
 ---
 
 ## 👨‍💼 About Me
-I am a research scholar at NTU Singapore, exploring the intersection of **topological data analysis**, **applied mathematics**, and **deep learning** to solve modern challenges in materials science and AI.
+Mahadeb Mandal is an research scholar at Nanyang Technological University (NTU), Singapore under the guidance of Prof. Kelin Xia. Prior to this, he completed his Master's degree at the Indian Institute of Technology(IIT) Bombay in India. He was also a PhD exchange student at the National University of Singapore (NUS) for five months, from January to May 2025.
 
 ---
 
@@ -27,11 +27,11 @@ I am a research scholar at NTU Singapore, exploring the intersection of **topolo
   *Aug 2024 – Present*
 
 - **M.Sc. in Mathematics**  
-  *Indian Institute of Technology (IIT) Bombay*  
+  *Indian Institute of Technology (IIT) Bombay, India*  
   *Jul 2022 – May 2024*
 
 - **B.Sc. in Mathematics**  
-  *Midnapore College (Autonomous), Vidyasagar University*  
+  *Midnapore College (Autonomous), Vidyasagar University, India*  
   *Jun 2019 – Jun 2022*
 
 ---
