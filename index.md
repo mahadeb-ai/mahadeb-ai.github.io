@@ -1,6 +1,8 @@
 ---
 layout: default
+title: Home
 ---
+
 <div align="center">
   <img src="assets/images/profile.png" alt="Profile Photo" width="180" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
   
