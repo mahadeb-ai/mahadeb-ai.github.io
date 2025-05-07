@@ -5,9 +5,16 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 2;
-            padding: 2;
+            margin: 0;
+            padding: 0;
         }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto; /* Centers content horizontally */
+            padding: 0 2rem; /* Adds left and right space */
+        }
+
         nav ul {
             list-style: none;
             padding: 1rem;
@@ -15,10 +22,12 @@
             background-color: #f4f4f4;
             text-align: center;
         }
+
         nav ul li {
             display: inline;
             margin: 0 1rem;
         }
+
         footer {
             text-align: center;
             padding: 1rem 0;
@@ -33,18 +42,20 @@
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            {% for item in site.nav %}
-            <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-            {% endfor %}
-        </ul>
-    </nav>
+    <div class="container">
+        <nav>
+            <ul>
+                {% for item in site.nav %}
+                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
 
-    {{ content }}
+        {{ content }}
 
-    <footer>
-        <p>&copy; 2025 Mahadeb Mandal, Academic Webpage!</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Mahadeb Mandal &nbsp;|&nbsp; Built with ❤️ using GitHub Pages & Jekyll</p>
+        </footer>
+    </div>
 </body>
 </html>
