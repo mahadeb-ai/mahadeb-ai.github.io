@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: Home
 title: Mahadeb Mandal
 ---
 
