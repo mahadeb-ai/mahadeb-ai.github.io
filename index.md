@@ -21,10 +21,17 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
 
 ---
 
-## 📬 Contact
-
-- 📧 Email: [wbmm2017@gmail.com](mailto:wbmm2017@gmail.com),  [mahadeb001@e.ntu.edu.sg](mailto:mahadeb001@e.ntu.edu.sg)  
-- 📍 Office: SPMS-MAS-04-02, Table: 9, School of Physical & Mathematical Sciences, 21 Nanyang Link, Singapore 637371 
-- 📱 Phone: +65 94XX XX12  
-- 🔗 [GitHub](https://github.com/your-username) |[LinkedIn](https://www.linkedin.com/in/mahadeb-mandal-5486a726b/)
+<section class="contact-section">
+  <h2>📬 Contact</h2>
+  <ul class="contact-list">
+    <li><strong>📧 Email:</strong> 
+      <a href="mailto:wbmm2017@gmail.com">wbmm2017@gmail.com</a>, 
+      <a href="mailto:mahadeb001@e.ntu.edu.sg">mahadeb001@e.ntu.edu.sg</a>
+    </li>
+    <li><strong>📍 Office:</strong> SPMS-MAS-04-02, Table: 9<br>
+      School of Physical & Mathematical Sciences, 21 Nanyang Link, Singapore 637371
+    </li>
+    <li><strong>📱 Phone:</strong> +65 94XX XX12</li>
+  </ul>
+</section>
 
