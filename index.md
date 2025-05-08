@@ -57,3 +57,21 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
   setInterval(updateClock, 1000);
   updateClock(); // Run immediately
 </script>
+
+
+<button id="dark-mode-toggle">🌙 Dark Mode</button>
+
+<script>
+  const toggle = document.getElementById('dark-mode-toggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+  });
+</script>
+
+<style>
+  .dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+</style>
