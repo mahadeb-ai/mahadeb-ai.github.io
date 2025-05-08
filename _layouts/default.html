@@ -11,16 +11,8 @@
             /* background: linear-gradient(to right, #1e3a8a, #2563eb); /* Match navbar/footer color */
             color: #111827;
         }
-        .contact-animated {
-            font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #f0f4f8, #e6ecf3);
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            animation: fadeUp 0.8s ease-in-out both;
-          }
         .contact-section {
-          max-width: 900px;
+          max-width: 1000px;
           margin: 2rem auto;
           padding: 2rem;
           background: rgba(255, 255, 255, 0.1);
@@ -38,7 +30,7 @@
         
         .contact-container {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
           gap: 1.5rem;
         }
         
@@ -51,6 +43,18 @@
           gap: 1rem;
           transition: transform 0.3s ease;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+          word-break: break-word;
+        }
+        
+        .email-card {
+          grid-column: 1 / -1; /* Makes email card full width */
+        }
+        
+        .email-wrapper {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 0.5rem;
+          width: 100%;
         }
         
         .contact-card:hover {
@@ -61,6 +65,12 @@
         .contact-icon {
           font-size: 1.8rem;
           margin-top: 0.3rem;
+          flex-shrink: 0;
+        }
+        
+        .contact-details {
+          flex-grow: 1;
+          min-width: 0; /* Fixes flexbox overflow issues */
         }
         
         .contact-details h3 {
@@ -72,6 +82,7 @@
           margin: 0.3rem 0;
           color: #555;
           line-height: 1.5;
+          overflow-wrap: break-word;
         }
         
         .contact-link {
@@ -85,77 +96,37 @@
           color: #2980b9;
           text-decoration: underline;
         }
-        .contact-animated h2 {
-            font-size: 1.9em;
-            color: #1f3b57;
-            border-left: 5px solid #007bff;
-            padding-left: 12px;
-            margin-bottom: 20px;
-          }
-
-        .contact-info {
-            list-style: none;
-            padding: 0;
-          }
-
-        .contact-info li {
-            margin-bottom: 1em;
-            font-size: 1.05em;
-            color: #2a2a2a;
-            padding: 8px 10px;
-            border-left: 3px solid transparent;
-            transition: all 0.3s ease;
-          }
-
-        .contact-info span {
-            font-weight: 600;
-            color: #007bff;
-          }
-
-        .contact-info a {
-            color: #007bff;
-            text-decoration: none;
-            transition: color 0.2s;
-            display: inline-block;
-            margin-left: 1em;
-          }
-
-        .contact-info a:hover {
-            color: #0056b3;
-            text-decoration: underline;
-            
-          }
-
-        .contact-info li:hover {
-            background-color: rgba(0, 123, 255, 0.06);
-            border-left: 3px solid #007bff;
-            border-radius: 8px;
-          }
-
-        @keyframes fadeUp {
-            0% {
-              opacity: 0;
-              transform: translateY(15px);
-            }
-            100% {
-              opacity: 1;
-              transform: translateY(0);
-            }
-          }
-
-        @media (max-width: 600px) {
-            .contact-animated {
-              padding: 20px;
-            }
         
-            .contact-animated h2 {
-              font-size: 1.5em;
-            }
-        
-            .contact-info li {
-              font-size: 0.95em;
-            }
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+          .email-card {
+            grid-column: auto; /* Revert to normal grid behavior */
           }
+          
+          .email-wrapper {
+            display: block;
+          }
+          
+          .email-wrapper a:first-child {
+            margin-bottom: 0.5rem;
+          }
+        }
+        
+        @media (min-width: 1024px) {
+          .contact-container {
+            grid-template-columns: repeat(3, 1fr);
+          }
+          
+          .email-card {
+            grid-column: span 2; /* Make email card take 2/3 width */
+          }
+        }
+        
+        
+        
+        
+        
+        
 
         .page-frame {
             margin: 10px 50px;
