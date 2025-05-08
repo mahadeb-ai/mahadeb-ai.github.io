@@ -4,7 +4,7 @@ title: Seminers & Talks
 permalink: /seminar/
 ---
 
-## 🗣️ Talk
+## Talk
 
 - **Current Research Progress**, Prof. Sum's Group Meeting. _(Apr, 2025)_
 
@@ -16,7 +16,7 @@ permalink: /seminar/
 
 ---
 
-## 🎓 Workshop / Seminar Attended
+## Workshop / Seminar Attended
 
 - **IMS-NUS Joint Workshop** on *Applied Geometry for Data Science Part II*, held at IMS Executive Seminar Room, Singapore ❗ _(Jun 02 – Jun 06, 2025)_
 
