@@ -25,16 +25,16 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
   <ul class="contact-info">
     <li>
       <span>📧 Email:</span> 
-      <a>wbmm2017<strong>@</strong>gmail<strong>.</strong>com</a>,<br> 
+      <a href="mailto:wbmm2017@gmail.com">wbmm2017<strong>@</strong>gmail<strong>.</strong>com</a>,<br> 
       <span style="margin-left: 3.2em;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a>mahadeb001<strong>@</strong>e<strong>.</strong>ntu<strong>.</strong>edu<strong>.</strong>sg</a>
+        <a href="mailto:mahadeb001@e.ntu.edu.sg">mahadeb001<strong>@</strong>e<strong>.</strong>ntu<strong>.</strong>edu<strong>.</strong>sg</a>
       </span>
     </li>
     <li>
       <span>📍 Office:</span> SPMS-MAS-04-02, Table: 9,<br>
       <span style="margin-left: 3.2em;">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;School of Physical & Mathematical Sciences,School of Physical & Mathematical Sciences,<br> 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21 Nanyang Link, Singapore 637371
+        School of Physical & Mathematical Sciences,<br> 
+        21 Nanyang Link, Singapore 637371
       </span>
     </li>
     <li>
@@ -42,4 +42,3 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
     </li>
   </ul>
 </section>
-
