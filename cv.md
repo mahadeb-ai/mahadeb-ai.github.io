@@ -57,3 +57,5 @@ permalink: /cv/
 
 - **2022**: Madhava Mathematics Competition (MMC) *(Top 50 students listed)*  
   *Conducted by HBCSE, TIFR & S.P. College, Pune*
+
+  *(A brief résumé is available upon request, subject to a valid reason).*
