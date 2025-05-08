@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Seminers & Talks
-permalink: /seminar/
+permalink: /events/
 ---
 
 ## Talk
