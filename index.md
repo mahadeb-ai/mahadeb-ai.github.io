@@ -19,7 +19,7 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
 
 
 <section class="contact-section">
-  <h2 class="section-title">📬 Get In Touch</h2>
+  <h2 class="section-title">Get In Touch</h2>
   <div class="contact-container">
     <div class="contact-card">
       <div class="contact-icon">📧</div>
@@ -41,7 +41,7 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
     </div>
     
     <div class="contact-card">
-      <div class="contact-icon">📱</div>
+      <div class="contact-icon">📞</div>
       <div class="contact-details">
         <h3>Phone</h3>
         <p>+65 94XX XX12</p>
