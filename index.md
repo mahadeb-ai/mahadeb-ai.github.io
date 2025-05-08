@@ -18,21 +18,34 @@ title: Home
 Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological University (NTU), Singapore**, working under the supervision of [**Prof. Kelin Xia**](https://personal.ntu.edu.sg/xiakelin/index.html). His academic journey is rooted in a strong passion for mathematics and artificial intelligence, with his current research focused on the intersection of **Topological Data Analysis (TDA)** and **Deep Learning**. He aims to uncover meaningful geometric and topological structures in complex data, contributing to advancements in data-driven science and intelligent systems.
 
 
-<section class="contact-animated">
-  <h2>Contact</h2>
-  <ul class="contact-info">
-    <li>
-      <span>Email:</span> 
-      <a href="mailto:wbmm2017@gmail.com">wbmm2017<strong>@</strong>gmail<strong>.</strong>com</a>,<br> 
-      <a href="mailto:mahadeb001@e.ntu.edu.sg">mahadeb001<strong>@</strong>e<strong>.</strong>ntu<strong>.</strong>edu<strong>.</strong>sg</a>
-    </li>
-    <li>
-      <span>Office:</span> SPMS-MAS-04-02, Table: 9,<br>
-      School of Physical & Mathematical Sciences,<br> 
-      21 Nanyang Link, Singapore 637371
-    </li>
-    <li>
-      <span>Phone:</span> +65 94XX XX12
-    </li>
-  </ul>
+<section class="contact-section">
+  <h2 class="section-title">Get In Touch</h2>
+  <div class="contact-container">
+    <div class="contact-card">
+      <div class="contact-icon"></div>
+      <div class="contact-details">
+        <h3>Email</h3>
+        <a href="mailto:wbmm2017@gmail.com" class="contact-link">wbmm2017@gmail.com</a>
+        <a href="mailto:mahadeb001@e.ntu.edu.sg" class="contact-link">mahadeb001@e.ntu.edu.sg</a>
+      </div>
+    </div>
+    
+    <div class="contact-card">
+      <div class="contact-icon"></div>
+      <div class="contact-details">
+        <h3>Office</h3>
+        <p>SPMS-MAS-04-02, Table: 9</p>
+        <p>School of Physical & Mathematical Sciences</p>
+        <p>21 Nanyang Link, Singapore 637371</p>
+      </div>
+    </div>
+    
+    <div class="contact-card">
+      <div class="contact-icon"></div>
+      <div class="contact-details">
+        <h3>Phone</h3>
+        <p>+65 94XX XX12</p>
+      </div>
+    </div>
+  </div>
 </section>
