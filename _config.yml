@@ -10,7 +10,7 @@ plugins:
 nav:
   - title: "Home"
     url: /
-  - title: "Curriculum vitae"
+  - title: "Academic Portfolio"
     url: /cv/
-  - title: "Seminars & Talks"
+  - title: "Events"
     url: /seminar/
