@@ -17,11 +17,13 @@ permalink: /cv/
 ## 🎓 Education
 
 - **Ph.D. in Artificial Intelligence**  
-  *Nanyang Technological University (NTU), Singapore*  
+  *Nanyang Technological University (NTU), Singapore*
+  *Advisor: Assoc Prof. Kelin Xia*  
   *Aug 2024 – Present*
 
 - **M.Sc. in Mathematics**  
-  *Indian Institute of Technology (IIT) Bombay, India*  
+  *Indian Institute of Technology (IIT) Bombay, India*
+  *Advisor: Dr. Kummari Mallesham* 
   *Jul 2022 – May 2024*
 
 - **B.Sc. in Mathematics**  
