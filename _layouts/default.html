@@ -12,7 +12,7 @@
             color: #111827;
         }
         .contact-section {
-          max-width: 1000px;
+          max-width: 900px;
           margin: 2rem auto;
           padding: 2rem;
           background: rgba(255, 255, 255, 0.1);
@@ -30,7 +30,7 @@
         
         .contact-container {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
           gap: 1.5rem;
         }
         
@@ -43,18 +43,6 @@
           gap: 1rem;
           transition: transform 0.3s ease;
           box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-          word-break: break-word;
-        }
-        
-        .email-card {
-          grid-column: 1 / -1; /* Makes email card full width */
-        }
-        
-        .email-wrapper {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 0.5rem;
-          width: 100%;
         }
         
         .contact-card:hover {
@@ -65,12 +53,6 @@
         .contact-icon {
           font-size: 1.8rem;
           margin-top: 0.3rem;
-          flex-shrink: 0;
-        }
-        
-        .contact-details {
-          flex-grow: 1;
-          min-width: 0; /* Fixes flexbox overflow issues */
         }
         
         .contact-details h3 {
@@ -82,7 +64,6 @@
           margin: 0.3rem 0;
           color: #555;
           line-height: 1.5;
-          overflow-wrap: break-word;
         }
         
         .contact-link {
@@ -96,32 +77,6 @@
           color: #2980b9;
           text-decoration: underline;
         }
-        
-        /* Responsive adjustments */
-        @media (min-width: 768px) {
-          .email-card {
-            grid-column: auto; /* Revert to normal grid behavior */
-          }
-          
-          .email-wrapper {
-            display: block;
-          }
-          
-          .email-wrapper a:first-child {
-            margin-bottom: 0.5rem;
-          }
-        }
-        
-        @media (min-width: 1024px) {
-          .contact-container {
-            grid-template-columns: repeat(3, 1fr);
-          }
-          
-          .email-card {
-            grid-column: span 2; /* Make email card take 2/3 width */
-          }
-        }
-        
         
         
         
