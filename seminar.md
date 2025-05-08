@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Seminers & Talks
+title: Events
 permalink: /events/
 ---
 
