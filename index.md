@@ -59,20 +59,104 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
 </script>
 
 
-<button id="dark-mode-toggle">🌙 Dark Mode</button>
+<button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
 
 <script>
   const toggle = document.getElementById('dark-mode-toggle');
+  
+  // Check saved preference (or use system preference)
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const savedMode = localStorage.getItem('dark-mode');
+  if (savedMode === 'true' || (!savedMode && prefersDark)) {
+    document.body.classList.add('dark-mode');
+    toggle.textContent = '☀️ Light Mode';
+  }
+
+  // Toggle function
   toggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    toggle.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    const isDark = document.body.classList.contains('dark-mode');
+    toggle.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+    localStorage.setItem('dark-mode', isDark);
   });
 </script>
 
 <style>
-  .dark-mode {
-    background-color: #121212;
+  :root {
+    --bg-light: #ffffff;
+    --text-light: #333333;
+    --link-light: #1a73e8;
+    --card-light: #f5f5f5;
+    
+    --bg-dark: #121212;
+    --text-dark: #e0e0e0;
+    --link-dark: #8ab4f8;
+    --card-dark: #1e1e1e;
+  }
+
+  body {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  /* Links */
+  a {
+    color: var(--link-light);
+    transition: color 0.2s;
+  }
+  .dark-mode a {
+    color: var(--link-dark);
+  }
+
+  /* Cards/Containers */
+  .card {
+    background: var(--card-light);
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .dark-mode .card {
+    background: var(--card-dark);
+  }
+
+  /* Buttons */
+  button {
+    background: #f0f0f0;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .dark-mode button {
+    background: #333;
     color: white;
+  }
+
+  /* Scrollbar (optional) */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  .dark-mode ::-webkit-scrollbar-thumb {
+    background: #555;
+  }
+
+  /* Code blocks */
+  pre {
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  .dark-mode pre {
+    background: #1e1e1e;
   }
 </style>
 
