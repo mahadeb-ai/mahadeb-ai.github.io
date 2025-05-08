@@ -75,3 +75,22 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
     color: white;
   }
 </style>
+
+<!-- Visitor Counter -->
+<p>👀 Total Visitors: <span id="visitor-count">Loading...</span></p>
+
+<script>
+  // Using CountAPI (free, no backend needed)
+  fetch('https://api.countapi.xyz/hit/mahadeb-ai.github.io/visits')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('visitor-count').innerText = data.value;
+    });
+</script>
+
+
+![Visitors](https://visitor-badge.glitch.me/badge?page_id=mahadeb-ai.github.io)
+
+**Last Updated**: ![Last Updated](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/repos/mahadeb-ai/mahadeb-ai.github.io&label=Last%20Updated&query=$.pushed_at&color=blue)
+
+
