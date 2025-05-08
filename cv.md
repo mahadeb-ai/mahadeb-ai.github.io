@@ -14,7 +14,7 @@ permalink: /cv/
 
 ---
 
-## 🎓 Education
+## Education
 
 - **Ph.D. in Artificial Intelligence**  
   *Nanyang Technological University (NTU), Singapore*  
