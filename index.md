@@ -46,14 +46,14 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
     </div>
   </div>
 </section>
-<!-- Visitor Counter -->
-<p>👀 Total Visitors: <span id="visitor-count">Loading...</span></p>
+
+<p>🕒 Local Time: <span id="live-clock"></span></p>
 
 <script>
-  // Using CountAPI (free, no backend needed)
-  fetch('https://api.countapi.xyz/hit/mahadeb-ai.github.io/visits')
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('visitor-count').innerText = data.value;
-    });
+  function updateClock() {
+    const now = new Date();
+    document.getElementById('live-clock').innerText = now.toLocaleTimeString();
+  }
+  setInterval(updateClock, 1000);
+  updateClock(); // Run immediately
 </script>
