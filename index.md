@@ -12,7 +12,7 @@ title: Home
   Interdisciplinary Graduate College<br>
   <strong>Nanyang Technological University, Singapore</strong></p>
 </div>
-
+---
 
 ## About Me
 
