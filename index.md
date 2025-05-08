@@ -17,7 +17,7 @@ title: Home
 
 ## About Me
 
-Mahadeb Mandal is currently a research scholar at **Nanyang Technological University (NTU), Singapore**, working under the supervision of **Prof. Kelin Xia**. His academic journey is rooted in a strong passion for mathematics and artificial intelligence, with his current research focused on the intersection of **Topological Data Analysis (TDA)** and **Deep Learning**. He aims to uncover meaningful geometric and topological structures in complex data, contributing to advancements in data-driven science and intelligent systems.
+Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological University (NTU), Singapore**, working under the supervision of **Prof. Kelin Xia**. His academic journey is rooted in a strong passion for mathematics and artificial intelligence, with his current research focused on the intersection of **Topological Data Analysis (TDA)** and **Deep Learning**. He aims to uncover meaningful geometric and topological structures in complex data, contributing to advancements in data-driven science and intelligent systems.
 
 ---
 
