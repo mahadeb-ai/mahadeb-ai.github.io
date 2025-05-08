@@ -18,7 +18,7 @@ permalink: /cv/
 
 - **Ph.D. in Artificial Intelligence**  
   *Nanyang Technological University (NTU), Singapore*  
-  *Advisor: Assoc Prof. Kelin Xia*  
+  *Supervisor: Assoc Prof. Kelin Xia*  
   *Aug 2024 – Present*  
 
 - **M.Sc. in Mathematics**    
