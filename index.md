@@ -25,7 +25,7 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
       <div class="contact-details">
         <h3>Email</h3>
         <a href="mailto:wbmm2017@gmail.com" class="contact-link">wbmm2017[AT]gmail.com</a>
-        <a href="mailto:mahadeb001[AT]e.ntu.edu.sg" class="contact-link">mahadeb001@e.ntu.edu.sg</a>
+        <a href="mailto:mahadeb001@e.ntu.edu.sg" class="contact-link">mahadeb001[AT]e.ntu.edu.sg</a>
       </div>
     </div>
     
