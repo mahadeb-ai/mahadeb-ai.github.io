@@ -21,21 +21,15 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
 <section class="contact-section">
   <h2 class="section-title">Get In Touch</h2>
   <div class="contact-container">
-    <!-- Email Card -->
-    <div class="contact-card email-card">
-      <div class="contact-icon">📧</div>
+    <div class="contact-card">
       <div class="contact-details">
         <h3>Email</h3>
-        <div class="email-wrapper">
-          <a href="mailto:wbmm2017@gmail.com" class="contact-link">wbmm2017@gmail.com</a>
-          <a href="mailto:mahadeb001@e.ntu.edu.sg" class="contact-link">mahadeb001@e.ntu.edu.sg</a>
-        </div>
+        <a href="mailto:wbmm2017@gmail.com" class="contact-link">wbmm2017@gmail.com</a>
+        <a href="mailto:mahadeb001@e.ntu.edu.sg" class="contact-link">mahadeb001@e.ntu.edu.sg</a>
       </div>
     </div>
     
-    <!-- Office Card -->
     <div class="contact-card">
-      <div class="contact-icon">📍</div>
       <div class="contact-details">
         <h3>Office</h3>
         <p>SPMS-MAS-04-02, Table: 9</p>
@@ -44,9 +38,7 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
       </div>
     </div>
     
-    <!-- Phone Card -->
     <div class="contact-card">
-      <div class="contact-icon">📱</div>
       <div class="contact-details">
         <h3>Phone</h3>
         <p>+65 94XX XX12</p>
