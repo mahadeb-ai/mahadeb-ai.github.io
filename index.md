@@ -32,8 +32,8 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
     <div class="contact-card">
       <div class="contact-details">
         <h3>Office</h3>
-        <p>SPMS-MAS-04-02, Table: 9</p>
-        <p>School of Physical & Mathematical Sciences</p>
+        <p>SPMS-MAS-04-02, Table: 9,</p>
+        <p>Division of Mathematical Sciences,</p>
         <p>21 Nanyang Link, Singapore 637371</p>
       </div>
     </div>
