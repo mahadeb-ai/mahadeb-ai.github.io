@@ -77,5 +77,5 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
 
 **Last Updated**: ![Last Updated](https://img.shields.io/badge/dynamic/json?url=https://api.github.com/repos/mahadeb-ai/mahadeb-ai.github.io&label=Last%20Updated&query=$.pushed_at&color=blue)
 
-![Visitor Count](https://hitwebcounter.com/counter/counter.php?page=1234567&style=0006&nbdigits=5&type=page&initCount=0)
+![Visitor Count](https://hitwebcounter.com/counter/counter.php?page=20612310&style=0025&nbdigits=6&type=page&initCount=0)
 
