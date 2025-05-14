@@ -4,11 +4,6 @@ title: Home
 ---
 
 
-<div class="preloader">
-    <div class="loader"></div>
-    <!-- You can add text or logo here -->
-</div>
-
 
 <div align="center">
   <img src="assets/images/profile.png" alt="Profile Photo" width="180" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
