@@ -6,11 +6,11 @@ permalink: /events/
 
 ## Talk
 
-- **Current Research Progress**, Prof. Xia's Group Meeting❗ _(1st week of Aug, 2025)_
+- **Prof. Xia's Group Meeting**: *Current Research Progress*❗ _(1st week of Aug, 2025)_
 
-- **Current Research Progress**, Prof. Sum's Group Meeting. _(Apr, 2025)_
+- **Prof. Sum's Group Meeting**: *Current Research Progress*. _(Apr, 2025)_
 
-- **Graph Networks for Materials Exploration (GNoME) Model for Material Discovery**, Prof. Xia's Group Meeting. _(Feb, 2025)_
+- **Prof. Xia's Group Meeting**:*Graph Networks for Materials Exploration (GNoME) Model for Material Discovery*. _(Feb, 2025)_
 
 - **M.Sc. Project Seminar at IIT Bombay**, titled: *Waring’s Problem with Analytic Tools: A Theoretical Exploration*. _(May, 2024)_
 
