@@ -6,19 +6,21 @@ permalink: /events/
 
 ## Talk
 
+- **Current Research Progress**, Prof. Xia's Group Meeting❗ _(1st week of Aug, 2025)_
+
 - **Current Research Progress**, Prof. Sum's Group Meeting. _(Apr, 2025)_
 
 - **Graph Networks for Materials Exploration (GNoME) Model for Material Discovery**, Prof. Xia's Group Meeting. _(Feb, 2025)_
 
-- **M.Sc. Project Seminar at IIT Bombay**, titled: *Waring’s Problem with Analytic Tools: A Theoretical Exploration*. [Access presentation slide by clicking here](#). _(May, 2024)_
+- **M.Sc. Project Seminar at IIT Bombay**, titled: *Waring’s Problem with Analytic Tools: A Theoretical Exploration*. _(May, 2024)_
 
-- **Winter Project Internship Talk at IIIT Nagpur (Online)**, titled: *An Elementary Approach to Quadratic Forms Theorem*. [Access presentation slide by clicking here](#). _(May, 2024)_
+- **Winter Project Internship Talk at IIIT Nagpur (Online)**, titled: *An Elementary Approach to Quadratic Forms Theorem*. _(May, 2024)_
 
 ---
 
 ## Workshop / Seminar Attended
 
-- **IMS-NUS Joint Workshop** on *Applied Geometry for Data Science Part II*, held at IMS Executive Seminar Room, Singapore ❗ _(Jun 02 – Jun 06, 2025)_
+- **IMS-NUS Joint Workshop** on *Applied Geometry for Data Science Part II*, held at IMS Executive Seminar Room, Singapore. _(Jun 02 – Jun 06, 2025)_
 
 - **IMS-NTU Joint Workshop** on *Applied Geometry for Data Sciences Part I*, held at IMS Auditorium, Singapore. _(Sep 30 – Oct 04, 2024)_
 
