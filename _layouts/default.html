@@ -116,9 +116,9 @@
 
         .page-frame {
             margin: 10px 50px;
-            background: linear-gradient(to bottom, #f3f4f6, #e0f2fe);  /* Inner content background */
+            background: linear-gradient(to bottom, #f8f9fa, #d0ebff);  /* Lighter gradient */
             border-radius: 12px;
-            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 12px rgba(0, 107, 194, 0.15); /* Blueish shadow */
             overflow: hidden;
         }
 
@@ -137,19 +137,21 @@
             padding: 0;
         }
         nav ul li a {
-            color: #4CBB17; /* Kelly green */
+            color: #4a6bff; /* Vibrant blue */
             text-decoration: none;
             font-weight: 600;
             letter-spacing: 0.5px;
             padding: 0.5rem 1rem;
             font-size: 1.1rem;
             border-radius: 8px;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            background-color: rgba(74, 107, 255, 0.08);
         }
         nav ul li a:hover {
-            color: #2563eb;
-            background-color: rgba(76, 187, 23, 0.1);
-            box-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+            color: #ffffff;
+            background-color: #4a6bff;
+            box-shadow: 0 4px 12px rgba(74, 107, 255, 0.3);
+            transform: translateY(-2px);
         }
 
         main {
@@ -157,12 +159,23 @@
             margin: 2rem auto;
             padding: 0 2rem;
             background: transparent;
+            color: #2d3748; /* Dark gray for better readability */
         }
 
+        main h1 {
+            color: #4a6bff; /* Matching nav color */
+        }
+
+        main h2 {
+            color: #5a67d8; /* Slightly lighter blue */
+        }
+        
         footer {
             padding: 1.5rem 2rem;
             text-align: center;
             box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.05);
+            background-color: #f8f9fa;
+            color: #4a5568; /* Medium gray */
         }
 
         .footer-icons {
@@ -176,16 +189,33 @@
             height: 42px;
             line-height: 42px;
             border-radius: 50%;
-            background-color: #e0e7ff;
-            color: #1e3a8a;
+            background: linear-gradient(135deg, #667eea, #4a6bff); /* Gradient effect */
+            color: white;
             text-align: center;
             font-size: 18px;
             transition: all 0.3s ease;
             text-decoration: none;
+            box-shadow: 0 2px 5px rgba(74, 107, 255, 0.2);
         }
         .footer-icons .icon:hover {
-            background-color: #1e3a8a;
+            background: linear-gradient(135deg, #5a67d8, #3b55d6); /* Darker gradient on hover */
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(74, 107, 255, 0.3);
+        }
+        /* Additional styling for better visual hierarchy */
+        .btn-primary {
+            background-color: #4a6bff;
             color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #3b55d6;
+            box-shadow: 0 4px 12px rgba(74, 107, 255, 0.3);
         }
     </style>
 </head>
