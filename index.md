@@ -4,7 +4,7 @@ title: Home
 ---
 
 <!-- ⏱️ Clock in "navbar area" -->
-<div style="text-align: right; padding: 10px 20px; font-size: 14px;">
+<div style="position: absolute; top: 10px; right: 20px; font-size: 14px; z-index: 999;">
   🕒 Local Time: <span id="live-clock"></span>
 </div>
 
