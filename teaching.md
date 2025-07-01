@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Teaching
+last_modified_at: 2025-07-01
 permalink: /teaching/
 ---
 
@@ -11,4 +12,21 @@ As part of my academic journey, I've had the privilege to contribute to various 
 ## Courses Assisted
 
 - **TBA** 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
