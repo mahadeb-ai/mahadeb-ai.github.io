@@ -28,7 +28,7 @@ title: Home
   Interdisciplinary Graduate College<br>
   <strong>Nanyang Technological University, Singapore</strong></p>
   <p>
-    📍 50 Nanyang Avenue, Singapore 639798<br>
+    📍 Lab office: SPMS-MAS-04-02, Table: 9, School of Physical and Mathematical Sciences<br>
     📧 <a href="mailto:mahadeb001@e.ntu.edu.sg">mahadeb001@e.ntu.edu.sg</a>
   </p>
 </div>
