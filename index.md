@@ -37,5 +37,13 @@ title: Home
 
 Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological University (NTU), Singapore**, working under the supervision of [**Prof. Kelin Xia**](https://personal.ntu.edu.sg/xiakelin/index.html). His academic journey is rooted in a strong passion for mathematics and artificial intelligence, with his current research focused on the intersection of **Topological Data Analysis (TDA)** and **Deep Learning**. He aims to uncover meaningful geometric and topological structures in complex data, contributing to advancements in data-driven science and intelligent systems.
 
+<!-- Sidebar -->
+<div style="position: fixed; top: 100px; left: 0; width: 150px; height: 100%; background-color: #f5f5f5; padding: 20px; box-shadow: 2px 0 5px rgba(0,0,0,0.1);">
+  <nav>
+    <a href="#about" style="display: block; margin-bottom: 10px; text-decoration: none; color: #333;">About</a>
+    <a href="#contact" style="display: block; margin-bottom: 10px; text-decoration: none; color: #333;">Contact Me</a>
+    <!-- Add more links if needed -->
+  </nav>
+</div>
 
          
