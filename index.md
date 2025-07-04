@@ -43,22 +43,24 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
 - Topological Data Analysis (TDA)
 - Deep Learning for Scientific Material Discovery
 - Mathematical AI
-<!-- 💧 Watermark -->
+<!-- 💧 NTU Logo Watermark -->
 <style>
   body::before {
     content: "";
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background-image: url('/assets/images/ntu_logo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 300px;
     opacity: 0.05;
-    z-index: -1;
+    z-index: 0; /* Try -1 if it still overlaps */
     pointer-events: none;
+    user-select: none;
   }
 </style>
+
 
