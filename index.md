@@ -45,17 +45,20 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
 - Mathematical AI
 <!-- 💧 Watermark -->
 <style>
-  .watermark {
+  body::before {
+    content: "";
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    opacity: 0.15;
-    font-size: 16px;
-    color: black;
-    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/ntu_logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px;
+    opacity: 0.05;
+    z-index: -1;
     pointer-events: none;
-    user-select: none;
   }
 </style>
 
-<div class="watermark">© Mahadeb Mandal | mahadeb-ai.github.io</div>
