@@ -43,4 +43,19 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
 - Topological Data Analysis (TDA)
 - Deep Learning for Scientific Material Discovery
 - Mathematical AI
-         
+<!-- 💧 Watermark -->
+<style>
+  .watermark {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.15;
+    font-size: 16px;
+    color: black;
+    z-index: 9999;
+    pointer-events: none;
+    user-select: none;
+  }
+</style>
+
+<div class="watermark">© Mahadeb Mandal | mahadeb-ai.github.io</div>
