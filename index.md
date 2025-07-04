@@ -55,7 +55,7 @@ Mahadeb Mandal is currently a second-year PhD student at **Nanyang Technological
     background-image: url('/assets/images/ntu_logo.png');
     background-repeat: no-repeat;
     background-position: center 95%;
-    background-size: 350px;
+    background-size: 500px;
     opacity: 0.05;
     z-index: 0;
     pointer-events: none;
