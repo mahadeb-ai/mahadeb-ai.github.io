@@ -5,7 +5,7 @@ last_modified_at: 2025-07-01
 ---
 
 <!-- ⏱️ Clock in "navbar area" -->
-<div style="position: absolute; top: 20px; right: 80px; font-size: 14px; z-index: 999;">
+<div style="position: absolute; top: 30px; right: 80px; font-size: 14px; z-index: 999;">
   🕒 Local Time: <span id="live-clock"></span>
 </div>
 
