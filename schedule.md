@@ -49,7 +49,25 @@ robots: noindex
 
 <!-- FullCalendar (CDN) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/main.min.css">
+
+<style>
+  /* Center the month title over the whole grid */
+  #calendar .fc-header-toolbar { position: relative; }
+  #calendar .fc-toolbar-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none; /* allow clicks through to buttons */
+  }
+
+  /* Optional: a little space on small screens so title doesn't overlap */
+  @media (max-width: 640px) {
+    #calendar .fc-header-toolbar { padding-top: .5rem; }
+  }
+</style>
+
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
+
 
 <script>
 /** 1) Your Firebase config */
