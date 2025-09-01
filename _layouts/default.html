@@ -74,10 +74,22 @@
     .hamburger{display:none;appearance:none;border:0;background:transparent;font-size:1.25rem;padding:.35rem;border-radius:.5rem}
     .hamburger:focus{outline:2px solid var(--brand-600)}
     #nav-toggle{display:none}
+
+    /* Dropdown */
+    .menu{display:flex;gap:.25rem;align-items:center}
+    .menu .menu-item{position:relative}
+    .drop-trigger{display:inline-flex;align-items:center;gap:.4rem;border:0;background:rgba(74,107,255,.08);color:var(--brand-600);font-weight:600;padding:.45rem .75rem;border-radius:.65rem;cursor:pointer;transition:.2s ease}
+    .drop-trigger:hover{background:var(--brand-600);color:#fff;box-shadow:0 6px 18px var(--ring);transform:translateY(-1px)}
+    .dropdown-menu{position:absolute;top:calc(100% + 8px);left:0;min-width:180px;background:var(--bg);border:1px solid rgba(100,116,139,.15);border-radius:12px;box-shadow:var(--shadow);padding:.4rem;display:none;z-index:30}
+    .menu-item.open .dropdown-menu{display:block}
+    .dropdown-menu a{display:block;padding:.45rem .6rem;border-radius:.5rem;color:var(--txt-700);text-decoration:none}
+    .dropdown-menu a:hover{background:rgba(74,107,255,.08);color:var(--brand-600)}
+
     @media (max-width: 780px){
       .hamburger{display:inline-block}
       .menu{display:none}
       #nav-toggle:checked + .menu{display:flex;flex-direction:column;gap:.35rem;position:absolute;left:0;right:0;top:54px;padding:.5rem 1rem 1rem;background:var(--bg);border-bottom:1px solid rgba(100,116,139,.15)}
+      .dropdown-menu{position:static;border:0;box-shadow:none;padding:0;margin:.25rem 0 0 0}
     }
 
     main{margin:2rem auto;max-width:900px;padding:0 1rem;color:var(--txt-700)}
@@ -130,7 +142,22 @@
         <input id="nav-toggle" type="checkbox" hidden>
         <nav id="site-menu" class="menu">
           {% for item in site.nav %}
-            <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
+            {% if item.children %}
+              <div class="menu-item dropdown">
+                <button class="drop-trigger" aria-haspopup="true" aria-expanded="false">
+                  {% if item.icon %}<i class="fa-solid {{ item.icon }}" aria-hidden="true"></i>{% endif %}
+                  <span>{{ item.title }}</span>
+                  <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                  {% for child in item.children %}
+                    <a role="menuitem" href="{{ child.url | relative_url }}">{{ child.title }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+            {% else %}
+              <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
+            {% endif %}
           {% endfor %}
         </nav>
         <div class="clock" aria-live="polite" title="Your local time">🕒 <span id="live-clock"></span></div>
@@ -198,6 +225,24 @@
         localStorage.setItem(key, next); applyTheme(next);
         this.innerHTML = next==='dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
       });
+
+      // Dropdown toggles
+      document.querySelectorAll('.menu .menu-item .drop-trigger').forEach(function(b){
+        b.addEventListener('click', function(e){
+          e.preventDefault();
+          const item = this.closest('.menu-item');
+          const open = item.classList.contains('open');
+          document.querySelectorAll('.menu .menu-item.open').forEach(function(i){ i.classList.remove('open'); });
+          if(!open){ item.classList.add('open'); this.setAttribute('aria-expanded','true'); }
+          else { this.setAttribute('aria-expanded','false'); }
+        });
+      });
+      document.addEventListener('click', function(e){
+        if(!e.target.closest('.menu')){
+          document.querySelectorAll('.menu .menu-item.open').forEach(function(i){ i.classList.remove('open'); });
+        }
+      });
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ document.querySelectorAll('.menu .menu-item.open').forEach(function(i){ i.classList.remove('open'); }); }});
     })();
   </script>
 </body>
