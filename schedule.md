@@ -97,7 +97,7 @@ auth.onAuthStateChanged(async (user) => {
 async function loadSchedule(uid){
   eventsEl.innerHTML = "<p>Loading…</p>";
   try{
-    const ref = db.collection('schedules').doc(uid).collection('items').doc('ID1').orderBy('datetime', 'asc');
+    const ref = db.collection('schedules').doc(uid).collection('items').orderBy('datetime', 'asc');
     const snap = await ref.get();
     if(snap.empty){
       eventsEl.innerHTML = "<p>No events yet.</p>";
