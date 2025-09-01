@@ -123,6 +123,29 @@
 
     /* Utilities */
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    /* Social chips – make the brand SVGs show as white glyphs */
+    .social{ display:flex; gap:12px; align-items:center; }
+    
+    .chip{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:42px; height:42px; border-radius:50%;
+      background:var(--chip-bg,#fff);
+      box-shadow:0 2px 5px rgba(74,107,255,.2);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .chip:hover{ transform:translateY(-3px); box-shadow:0 6px 15px rgba(74,107,255,.3); }
+    
+    /* force any SVG to render white, regardless of original fill */
+    .brand-icon{
+      width:22px; height:22px; display:block;
+      filter: brightness(0) invert(1); /* turn black/dark to pure white */
+    }
+    
+    /* brand backgrounds (the circle colors) */
+    .chip--linkedin{ --chip-bg:#0A66C2; }
+    .chip--scholar{  --chip-bg:#4285F4; }
+    .chip--rg{       --chip-bg:#00CCBB; }
+    .chip--github{   --chip-bg:#181717; }
   </style>
   {% seo %}
 </head>
