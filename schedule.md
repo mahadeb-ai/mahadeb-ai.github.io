@@ -35,15 +35,15 @@ robots: noindex
 <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
 
 <script>
-/** 1) Paste your Firebase config here (from Firebase Console → Project settings → General → Your apps) */
+/** 1) Your Firebase config */
 const firebaseConfig = {
   apiKey: "AIzaSyCOyayGUYBREEok4rTLJIQAv-8iIvJn-VE",
-    authDomain: "mahadeb-schedule.firebaseapp.com",
-    projectId: "mahadeb-schedule",
-    storageBucket: "mahadeb-schedule.firebasestorage.app",
-    messagingSenderId: "644636693352",
-    appId: "1:644636693352:web:816f7105c4158165a1fcdd",
-    measurementId: "G-46S6QYBKX3"
+  authDomain: "mahadeb-schedule.firebaseapp.com",
+  projectId: "mahadeb-schedule",
+  storageBucket: "mahadeb-schedule.firebasestorage.app",
+  messagingSenderId: "644636693352",
+  appId: "1:644636693352:web:816f7105c4158165a1fcdd",
+  measurementId: "G-46S6QYBKX3"
 };
 /** 2) Init Firebase */
 firebase.initializeApp(firebaseConfig);
@@ -61,17 +61,16 @@ const protectedEl = document.getElementById('protected');
 const eventsEl = document.getElementById('events');
 
 loginBtn.addEventListener('click', async () => {
-  try{
-    await auth.signInWithEmailAndPassword(emailEl.value.trim(), passEl.value);
-  }catch(e){ alert(e.message); }
+  try { await auth.signInWithEmailAndPassword(emailEl.value.trim(), passEl.value); }
+  catch(e){ alert(e.message); }
 });
 signupBtn.addEventListener('click', async () => {
-  try{
-    await auth.createUserWithEmailAndPassword(emailEl.value.trim(), passEl.value);
-  }catch(e){ alert(e.message); }
+  try { await auth.createUserWithEmailAndPassword(emailEl.value.trim(), passEl.value); }
+  catch(e){ alert(e.message); }
 });
 logoutBtn.addEventListener('click', async () => {
-  try{ await auth.signOut(); }catch(e){ alert(e.message); }
+  try { await auth.signOut(); }
+  catch(e){ alert(e.message); }
 });
 
 /** Auth state observer */
@@ -93,28 +92,58 @@ auth.onAuthStateChanged(async (user) => {
   }
 });
 
-/** Load schedules from Firestore: schedules/{uid}/items (ordered by date) */
+/** Load schedules from Firestore: schedules/{uid}/items */
 async function loadSchedule(uid){
   eventsEl.innerHTML = "<p>Loading…</p>";
   try{
-    const ref = db.collection('schedules').doc(uid).collection('items').doc('ID1');
-    const snap = await ref.get();
-    if(snap.empty){
+    // Read the subcollection (no orderBy so this works with either shape)
+    const coll = db.collection('schedules').doc(uid).collection('items');
+    const snap = await coll.get();
+
+    if (snap.empty){
       eventsEl.innerHTML = "<p>No events yet.</p>";
       return;
     }
-    let html = '';
+
+    // Build a unified list of events from both possible shapes
+    const events = [];
     snap.forEach(doc => {
-      const ev = doc.data();
-      const dt = ev.datetime?.toDate ? ev.datetime.toDate() : (ev.datetime ? new Date(ev.datetime) : null);
+      const data = doc.data() || {};
+
+      // Shape A (canonical): fields title, datetime (Timestamp), optional location/notes
+      if (data.datetime) {
+        const dt = data.datetime?.toDate ? data.datetime.toDate() : null;
+        events.push({
+          title: data.title || 'Untitled',
+          datetime: dt,
+          location: data.location || '',
+          notes: data.notes || ''
+        });
+      } else {
+        // Shape B (your current): one field where key = title, value = Timestamp
+        const entries = Object.entries(data);
+        if (entries.length > 0){
+          const [title, ts] = entries[0];
+          const dt = ts?.toDate ? ts.toDate() : null;
+          events.push({ title, datetime: dt, location: '', notes: '' });
+        }
+      }
+    });
+
+    // Sort by time ascending
+    events.sort((a,b) => (a.datetime?.getTime() || 0) - (b.datetime?.getTime() || 0));
+
+    // Render
+    let html = '';
+    for (const ev of events){
       html += `
         <div style="border:1px solid rgba(100,116,139,.2);border-radius:12px;padding:12px;margin:8px 0;">
-          <strong>${ev.title || 'Untitled'}</strong><br/>
-          ${dt ? dt.toLocaleString() : ''} ${ev.location ? ' · ' + ev.location : ''}<br/>
+          <strong>${ev.title}</strong><br/>
+          ${ev.datetime ? ev.datetime.toLocaleString() : ''}${ev.location ? ' · ' + ev.location : ''}<br/>
           ${ev.notes ? '<span style="color:#64748b">' + ev.notes + '</span>' : ''}
         </div>`;
-    });
-    eventsEl.innerHTML = html;
+    }
+    eventsEl.innerHTML = html || "<p>No events yet.</p>";
   }catch(e){
     eventsEl.innerHTML = "<p style='color:#ef4444'>Failed to load events: "+e.message+"</p>";
   }
