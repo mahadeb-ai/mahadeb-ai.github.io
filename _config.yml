@@ -3,7 +3,8 @@ description: "Academic Webpage!"
 baseurl: "" 
 url: "https://mahadeb-ai.github.io"
 author: "Mahadeb Mandal"
-github_username: mahadeb-ai   
+github_username: mahadeb-ai 
+cv_url: "/assets/Mahadeb_Mandal_CV.pdf"
 
 nav:
   - title: Home
@@ -14,3 +15,28 @@ nav:
     url: /events/
   - title: Teaching
     url: /teaching/
+
+# Theme & Build
+markdown: kramdown
+permalink: pretty
+timezone: Asia/Singapore
+
+# GitHub Pages–supported plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Exclusions to speed build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Defaults (auto-add layout + last_modified)
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      last_modified_at: 2025-09-01
