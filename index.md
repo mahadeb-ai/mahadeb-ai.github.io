@@ -4,21 +4,6 @@ title: Home
 last_modified_at: 2025-07-01
 ---
 
-<!-- ⏱️ Clock in "navbar area" -->
-<div style="position: absolute; top: 40px; right: 80px; font-size: 14px; z-index: 999;">
-  🕒 Local Time: <span id="live-clock"></span>
-</div>
-
-<script>
-  function updateClock() {
-    const now = new Date();
-    document.getElementById('live-clock').innerText = now.toLocaleTimeString();
-  }
-  setInterval(updateClock, 1000);
-  updateClock(); // Run immediately
-</script>
-
-
 <!-- Main content -->
 <div align="center">
   <img src="assets/images/profile.png" alt="Profile Photo" width="180" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
