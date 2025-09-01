@@ -172,13 +172,22 @@
     <footer>
       <div class="container">
         <div class="social" aria-label="Social links">
-          <a class="chip" href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-          <a class="chip" href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i></a>
-          <a class="chip" href="https://www.researchgate.net" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fab fa-researchgate" aria-hidden="true"></i></a>
-          {% if site.github_username %}
-          <a class="chip" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
-          {% endif %}
-        </div>
+        <a class="chip" href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="" aria-hidden="true">
+        </a>
+        <a class="chip" href="https://scholar.google.com/" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+          <img src="https://cdn.simpleicons.org/googlescholar/4285F4" alt="" aria-hidden="true">
+        </a>
+        <a class="chip" href="https://www.researchgate.net" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate">
+          <img src="https://cdn.simpleicons.org/researchgate/00CCBB" alt="" aria-hidden="true">
+        </a>
+        {% if site.github_username %}
+        <a class="chip" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <img src="https://cdn.simpleicons.org/github/181717" alt="" aria-hidden="true">
+        </a>
+  {% endif %}
+</div>
+
         <div class="last-updated">&copy; {{ 'now' | date: '%Y' }} {{ site.author | default: 'Mahadeb Mandal' }} · Last updated {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
       </div>
     </footer>
