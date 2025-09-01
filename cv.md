@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Academic Portfolio
+title: CV
 last_modified_at: 2025-09-01
 permalink: /cv/
 ---
