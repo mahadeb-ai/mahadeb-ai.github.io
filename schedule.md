@@ -38,7 +38,7 @@ robots: noindex
     <!-- Calendar -->
     <div id="calendar" style="display:none;margin-top:1rem;"></div>
 
-    <p style="color:#64748b;margin-top:1rem;">Only you can see this. Data is fetched from Firestore using your authenticated user ID.</p>
+    <p style="color:#64748b;margin-top:1rem;">Only you can see this.</p>
   </div>
 </div>
 
