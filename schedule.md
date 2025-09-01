@@ -37,12 +37,13 @@ robots: noindex
 <script>
 /** 1) Paste your Firebase config here (from Firebase Console → Project settings → General → Your apps) */
 const firebaseConfig = {
-  apiKey: "PASTE_YOURS",
-  authDomain: "PASTE_YOURS.firebaseapp.com",
-  projectId: "PASTE_YOURS",
-  storageBucket: "PASTE_YOURS.appspot.com",
-  messagingSenderId: "PASTE_YOURS",
-  appId: "PASTE_YOURS"
+  apiKey: "AIzaSyCOyayGUYBREEok4rTLJIQAv-8iIvJn-VE",
+    authDomain: "mahadeb-schedule.firebaseapp.com",
+    projectId: "mahadeb-schedule",
+    storageBucket: "mahadeb-schedule.firebasestorage.app",
+    messagingSenderId: "644636693352",
+    appId: "1:644636693352:web:816f7105c4158165a1fcdd",
+    measurementId: "G-46S6QYBKX3"
 };
 /** 2) Init Firebase */
 firebase.initializeApp(firebaseConfig);
