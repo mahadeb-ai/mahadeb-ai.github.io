@@ -9,7 +9,7 @@ cv_url: "/assets/Mahadeb_Mandal_CV.pdf"
 nav:
   - title: Home
     url: /
-  - title: Academic Portfolio
+  - title: CV
     url: /cv/
   - title: Events
     url: /events/
