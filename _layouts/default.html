@@ -171,7 +171,7 @@
 
     <footer>
       <div class="container">
-      <div class="social" aria-label="Social links">
+        <div class="social" aria-label="Social links">
           <a class="chip" href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <img src="https://cdn.simpleicons.org/linkedin/0A66C2" alt="" aria-hidden="true">
           </a>
@@ -185,15 +185,8 @@
           <a class="chip" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <img src="https://cdn.simpleicons.org/github/181717" alt="" aria-hidden="true">
           </a>
-  {% endif %}
-</div>
-
-  {% endif %}
-</div>
-
-  {% endif %}
-</div>
-
+          {% endif %}
+        </div>
         <div class="last-updated">&copy; {{ 'now' | date: '%Y' }} {{ site.author | default: 'Mahadeb Mandal' }} · Last updated {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
       </div>
     </footer>
