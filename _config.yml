@@ -2,17 +2,15 @@ title: "Mahadeb Mandal"
 description: "Academic Webpage!"
 baseurl: "" 
 url: "https://mahadeb-ai.github.io"
-theme: minima
-plugins:
-  - jekyll-feed
-  
-# Navigation
+author: "Mahadeb Mandal"
+github_username: mahadeb-ai   
+
 nav:
-  - title: "Home"
+  - title: Home
     url: /
-  - title: "Academic Portfolio"
+  - title: Academic Portfolio
     url: /cv/
-  - title: "Events"
+  - title: Events
     url: /events/
-  - title: "Teaching"
+  - title: Teaching
     url: /teaching/
