@@ -132,9 +132,6 @@
           {% for item in site.nav %}
             <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
           {% endfor %}
-          {% if site.cv_url %}
-            <a href="{{ site.cv_url | relative_url }}" class="cv-btn">CV</a>
-          {% endif %}
         </nav>
         <div class="clock" aria-live="polite" title="Your local time">🕒 <span id="live-clock"></span></div>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
