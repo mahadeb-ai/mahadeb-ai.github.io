@@ -123,7 +123,7 @@ robots: noindex
     border-radius: 999px;
     background: rgba(74,107,255,0.08);
     color: #4a6bff;
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: .08em;
