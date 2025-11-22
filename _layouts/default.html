@@ -2,138 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>{{ page.title }} | {{ site.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light dark" />
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}" />
-
-  <!-- Icons / Fonts -->
+  <meta name="theme-color" content="#4a6bff" />
+  <meta name="robots" content="index, follow" />
+  
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="{{ site.favicon_ico | default: '/assets/favicon.ico' }}" type="image/x-icon">
+  
+  <!-- Preload critical fonts -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-0S8oJx7p0x6l9xXqkci4c9yF7v7sQ6qVx0M0o1+W9Hn4Q6G5Qb3m7KxQv0mNwq7p3A7xJgYf0Ck6bTz9jvCmAQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-  <!-- CSS: tokens first -->
   <style>
     :root{
-      /* brand */
-      --brand-600:#4a6bff; /* primary */
-      --brand-700:#3b55d6;
-      --brand-200:#e7ecff;
-      /* text */
-      --txt-900:#0f172a;  /* slate-900 */
-      --txt-700:#334155;
-      --txt-500:#64748b;
-      /* surface */
-      --bg:#ffffff;
-      --bg-soft:#f8fafc;
-      --ring:rgba(74,107,255,.35);
+      --brand-600:#4a6bff; --brand-700:#3b55d6; --brand-200:#e7ecff;
+      --txt-900:#0f172a; --txt-700:#334155; --txt-500:#64748b;
+      --bg:#ffffff; --bg-soft:#f8fafc; --ring:rgba(74,107,255,.35);
       --shadow:0 10px 25px rgba(2,6,23,.08);
     }
     @media (prefers-color-scheme: dark){
       :root{
-        --brand-600:#7da0ff;
-        --brand-700:#9ab3ff;
-        --brand-200:#22306b;
-        --txt-900:#e5e7eb;
-        --txt-700:#cbd5e1;
-        --txt-500:#94a3b8;
-        --bg:#0b1020;
-        --bg-soft:#0f172a;
-        --ring:rgba(125,160,255,.45);
-        --shadow:0 10px 25px rgba(0,0,0,.4);
+        --brand-600:#7da0ff; --brand-700:#9ab3ff; --brand-200:#22306b;
+        --txt-900:#f1f5f9; --txt-700:#cbd5e1; --txt-500:#94a3b8;
+        --bg:#0b1020; --bg-soft:#0f172a; --ring:rgba(125,160,255,.45);
+        --shadow:0 10px 25px rgba(0,0,0,.5);
       }
-      .logo-mark{ filter: brightness(1.2) contrast(1.1); }
     }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6;color:var(--txt-700);background:var(--bg)}
+    *,*::before,*::after{box-sizing:border-box}
+    html{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6;color:var(--txt-700);background:var(--bg);scroll-behavior:smooth}
+    body{margin:0;height:100%}
 
-    /* Skip link */
-    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
-    .skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:var(--brand-600);color:#fff;padding:.5rem .75rem;border-radius:.5rem;z-index:1000}
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:100}
+    .skip-link:focus{left:1rem;top:1rem;background:var(--brand-600);color:#fff;padding:.75rem 1rem;border-radius:8px}
 
-    /* Frame */
     .page-frame{margin:12px auto;max-width:1200px;border-radius:16px;background:linear-gradient(180deg,var(--bg-soft),var(--brand-200) 220%);box-shadow:var(--shadow);overflow:hidden}
-    .container{max-width:1100px;margin:0 auto;padding:0 1rem}
+    .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
 
-    /* Header/Nav */
-    header{position:sticky;top:0;background:var(--bg);backdrop-filter:saturate(140%) blur(6px);border-bottom:1px solid rgba(100,116,139,.15);z-index:50}
-    .nav-wrap{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:.6rem .5rem}
-    .brand{display:flex;align-items:center;gap:.6rem;font-weight:700;color:var(--txt-900);text-decoration:none}
-    .brand .logo-mark{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--brand-600),var(--brand-700));box-shadow:0 4px 14px var(--ring)}
+    header{position:sticky;top:0;background:var(--bg);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid rgba(100,116,139,.15);z-index:50}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:.75rem 0}
+    .brand{display:flex;align-items:center;gap:.75rem;font-weight:700;font-size:1.25rem;color:var(--txt-900);text-decoration:none}
+    .logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--brand-600),var(--brand-700));box-shadow:0 4px 14px var(--ring)}
 
-    /* Live clock */
-    .clock{font-variant-numeric:tabular-nums;color:var(--txt-500);font-size:.9rem;white-space:nowrap}
+    .clock{font-variant-numeric:tabular-nums;color:var(--txt-500);font-size:.95rem}
+    .menu{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+    .menu a{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:rgba(74,107,255,.1);color:var(--brand-600);font-weight:600;text-decoration:none;transition:all .2s}
+    .menu a:hover,.menu a[aria-current="page"]{background:var(--brand-600);color:#fff;transform:translateY(-2px);box-shadow:0 6px 18px var(--ring)}
 
-    /* Menu */
-    .menu{display:flex;gap:.25rem;align-items:center}
-    .menu a{display:inline-block;text-decoration:none;color:var(--brand-600);font-weight:600;letter-spacing:.2px;padding:.45rem .75rem;border-radius:.65rem;background:rgba(74,107,255,.08);transition:.2s ease}
-    .menu a:hover,.menu a[aria-current="page"]{color:#fff;background:var(--brand-600);box-shadow:0 6px 18px var(--ring);transform:translateY(-1px)}
-
-    /* Mobile menu */
-    .hamburger{display:none;appearance:none;border:0;background:transparent;font-size:1.25rem;padding:.35rem;border-radius:.5rem}
-    .hamburger:focus{outline:2px solid var(--brand-600)}
+    .hamburger{display:none;cursor:pointer;background:none;border:none;font-size:1.5rem;color:var(--txt-700)}
     #nav-toggle{display:none}
-
-    @media (max-width: 780px){
-      .hamburger{display:inline-block}
-      .menu{display:none}
-      #nav-toggle:checked + .menu{display:flex;flex-direction:column;gap:.35rem;position:absolute;left:0;right:0;top:54px;padding:.5rem 1rem 1rem;background:var(--bg);border-bottom:1px solid rgba(100,116,139,.15)}
+    @media (max-width:780px){
+      .hamburger{display:block}
+      .menu{position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1rem;border-bottom:1px solid rgba(100,116,139,.15);box-shadow:var(--shadow);display:none}
+      #nav-toggle:checked ~ .menu{display:flex}
     }
 
-    main{margin:2rem auto;max-width:900px;padding:0 1rem;color:var(--txt-700)}
-    main h1, main h2, main h3{color:var(--brand-600)}
+    main{margin:3rem auto;max-width:900px;padding:0 1rem}
+    main h1,main h2,main h3{color:var(--brand-600)}
 
-    .section-title{text-align:center;color:var(--brand-600);margin:0 0 1.25rem;font-size:1.75rem;position:relative}
-    .section-title::after{content:"";display:block;width:96px;height:4px;background:linear-gradient(to right,var(--brand-600),var(--brand-700));margin:.45rem auto 0;border-radius:3px}
+    footer .social{gap:16px;margin:1.5rem 0}
+    .chip{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px var(--ring);transition:all .2s}
+    .chip:hover{transform:translateY(-4px)}
 
-    /* Contact Cards */
-    .contact-section{margin:2.5rem auto;max-width:900px;padding:0 1rem}
-    .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
-    .card{background:var(--bg);border-radius:14px;padding:1rem;box-shadow:0 5px 14px rgba(2,6,23,.06);transition:transform .2s ease, box-shadow .2s ease}
-    .card:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(2,6,23,.08)}
-    .icon{font-size:1.2rem;margin-top:.15rem;color:var(--brand-600)}
-    .card h3{margin:.25rem 0;color:var(--txt-900);font-size:1rem}
-    .card p, .card a{margin:.2rem 0;color:var(--txt-700);font-size:.9rem}
-    .card a{color:var(--txt-900);text-decoration:none}
-    .card a:hover{text-decoration:underline}
-
-    /* Footer */
-    .cv-btn{margin-left:.25rem}
-    .theme-toggle{margin-left:.35rem;appearance:none;border:1px solid rgba(100,116,139,.25);background:var(--bg);color:var(--txt-700);padding:.35rem .55rem;border-radius:.6rem;cursor:pointer;box-shadow:0 2px 6px rgba(2,6,23,.06)}
-    .theme-toggle:hover{border-color:var(--brand-600)}
-
-    /* Footer */
-    footer{border-top:1px solid rgba(100,116,139,.15);padding:1.25rem 0;text-align:center}
-    .social{display:flex;justify-content:center;gap:.6rem;margin:.25rem 0 1rem}
-    .chip{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:999px;background:linear-gradient(135deg,var(--brand-600),var(--brand-700));color:#fff;text-decoration:none;box-shadow:0 6px 18px var(--ring);transition:transform .18s ease}
-    .chip:hover{transform:translateY(-2px)}
-    .last-updated{font-size:.85rem;color:var(--txt-500)}
-
-    /* Utilities */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    
-    /* Social chips */
-    .social{ display:flex; justify-content:center; gap:12px; margin:.25rem 0 1rem; }
-
-    .chip{
-      display:inline-flex; align-items:center; justify-content:center;
-      width:42px; height:42px; border-radius:999px;
-      background:var(--chip-bg,#fff);
-      color:#fff;
-      box-shadow:0 6px 18px var(--ring);
-      transition:transform .18s ease, box-shadow .18s ease;
-    }
-    .chip:hover{ transform:translateY(-2px); }
-    
-    .chip i{ font-size:18px; line-height:1; }
-    
-    /* brand backgrounds */
-    .chip--linkedin{ --chip-bg:#0A66C2; }
-    .chip--scholar{  --chip-bg:#4285F4; }
-    .chip--rg{       --chip-bg:#00CCBB; }
-    .chip--github{   --chip-bg:#181717; }
-
+    .last-updated{font-size:.9rem;color:var(--txt-500);text-align:center;margin-bottom:1rem}
   </style>
   {% seo %}
 </head>
@@ -142,22 +78,23 @@
   <div class="page-frame">
     <header>
       <div class="container nav-wrap" role="navigation" aria-label="Primary">
-        <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+        <a class="brand" href="{{ '/' | relative_url }}">
           <span class="logo-mark" aria-hidden="true"></span>
           <span>{{ site.title }}</span>
         </a>
-        <label for="nav-toggle" class="sr-only">Toggle Navigation</label>
-        <button class="hamburger" aria-controls="site-menu" aria-expanded="false" onclick="document.getElementById('nav-toggle').click()">
+        
+        <label class="hamburger" for="nav-toggle" aria-label="Toggle menu">
           <i class="fa-solid fa-bars"></i>
-        </button>
-        <input id="nav-toggle" type="checkbox" hidden>
-        <nav id="site-menu" class="menu">
+        </label>
+        <input type="checkbox" id="nav-toggle" hidden>
+        <nav class="menu" id="site-menu">
           {% for item in site.nav %}
             <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
           {% endfor %}
         </nav>
-        <div class="clock" aria-live="polite" title="Your local time">🕒 <span id="live-clock"></span></div>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+        
+        <div class="clock" aria-live="polite">🕒 <span id="live-clock"></span></div>
+        <button id="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
       </div>
     </header>
 
@@ -168,68 +105,41 @@
     <footer>
       <div class="container">
         <div class="social" aria-label="Social links">
-          <a class="chip chip--linkedin" href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-          </a>
-          <a class="chip chip--scholar" href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar">
-            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-          </a>
-          <a class="chip chip--rg" href="https://www.researchgate.net" target="_blank" rel="noopener" aria-label="ResearchGate">
-            <i class="fab fa-researchgate" aria-hidden="true"></i>
-          </a>
-          {% if site.github_username %}
-          <a class="chip chip--github" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" aria-label="GitHub">
-            <i class="fab fa-github" aria-hidden="true"></i>
-          </a>
-          {% endif %}
+          <a class="chip chip--linkedin" href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a class="chip chip--scholar" href="https://scholar.google.com/" target="_blank" rel="noopener" aria-label="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a class="chip chip--rg" href="https://www.researchgate.net" target="_blank" rel="noopener" aria-label="ResearchGate"><i class="fab fa-researchgate"></i></a>
+          <a class="chip chip--github" href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
-        <div class="last-updated">&copy; {{ 'now' | date: '%Y' }} {{ site.author | default: 'Mahadeb Mandal' }} · Last updated {{ page.last_modified_at | date: "%B %d, %Y" }}</div>
+        <div class="last-updated">
+          © {{ 'now' | date: '%Y' }} Mahadeb Mandal · Last updated {{ site.time | date: "%B %d, %Y" }}
+        </div>
       </div>
     </footer>
   </div>
 
-  <!-- JS: Live clock + prefer-reduced-motion friendly tick -->
-  <script>
-    (function(){
-      const clock = document.getElementById('live-clock');
-      function tick(){
-        const now = new Date();
-        clock.textContent = now.toLocaleTimeString();
-      }
-      tick();
-      const id = setInterval(tick, 1000);
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-        clearInterval(id);
-        clock.textContent = new Date().toLocaleTimeString();
-      }
-    })();
-  </script>
-  <!-- JS: Theme toggle + Live clock -->
-  <script>
-    (function(){
-      const clock = document.getElementById('live-clock');
-      function tick(){
-        clock.textContent = new Date().toLocaleTimeString();
-      }
-      if(clock){ tick(); var id = setInterval(tick, 1000);
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches){ clearInterval(id); tick(); }
-      }
-      // Theme persistence
-      const btn = document.getElementById('theme-toggle');
-      const root = document.documentElement;
-      const key = 'mm-theme';
-      function applyTheme(mode){
-        if(mode==='dark'){ root.dataset.theme='dark'; document.documentElement.classList.add('dark'); }
-        else { root.dataset.theme='light'; document.documentElement.classList.remove('dark'); }
-      }
-      const saved = localStorage.getItem(key);
-      if(saved){ applyTheme(saved); }
-      btn && btn.addEventListener('click', function(){
-        const next = (localStorage.getItem(key) === 'dark') ? 'light' : 'dark';
-        localStorage.setItem(key, next); applyTheme(next);
-        this.innerHTML = next==='dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
-      });
-    })();
+  <script defer>
+    // Live Clock
+    const clock = document.getElementById('live-clock');
+    if (clock) {
+      const tick = () => clock.textContent = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'});
+      tick(); setInterval(tick, 1000);
+    }
+
+    // Theme Toggle
+    const btn = document.getElementById('theme-toggle');
+    const root = document.documentElement;
+    const key = 'mm-theme';
+    const apply = (mode) => {
+      root.dataset.theme = mode;
+      btn.innerHTML = mode === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+    };
+    const saved = localStorage.getItem(key) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    apply(saved);
+    btn.addEventListener('click', () => {
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      localStorage.setItem(key, next);
+      apply(next);
+    });
   </script>
 </body>
 </html>
