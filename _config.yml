@@ -1,13 +1,13 @@
 # _config.yml
 title: "Mahadeb Mandal"
-description: "Academic Webpage!"
-baseurl: "" 
+description: "PhD Student in AI & Topological Data Analysis at NTU Singapore"
+baseurl: ""
 url: "https://mahadeb-ai.github.io"
 author: "Mahadeb Mandal"
-github_username: mahadeb-ai 
+email: "mahadeb001@e.ntu.edu.sg"
+github_username: mahadeb-ai
 cv_url: "/assets/Mahadeb_Mandal_CV.pdf"
 
-# Navigation - FIXED: Removed icon from nav items
 nav:
   - title: Home
     url: /
@@ -20,27 +20,26 @@ nav:
   - title: Schedule
     url: /schedule/
 
-# Theme & Build
 markdown: kramdown
 permalink: pretty
 timezone: Asia/Singapore
 
-# GitHub Pages–supported plugins
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
 
-# Exclusions to speed build
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
 
-# Defaults (auto-add layout + last_modified)
 defaults:
   - scope:
       path: ""
     values:
       layout: default
-      last_modified_at: 2025-09-01
+      last_modified_at: 2025-11-22
+
+# Add favicon support
+favicon_ico: /assets/favicon.ico
