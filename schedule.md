@@ -41,98 +41,159 @@ robots: noindex
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js"></script>
 
 <style>
-  .btn-primary{background:var(--brand-600);color:white;border:none;padding:10px 18px;border-radius:8px;cursor:pointer;font-weight:600;transition:.2s}
+  .btn-primary{
+    background:var(--brand-600);
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.2s
+  }
   .btn-primary:hover{background:var(--brand-700)}
   .btn-primary.active{background:#1e293b;color:white}
   .fc { --fc-border-color: #e2e8f0; --fc-daygrid-event-dot-width: 8px; }
 </style>
 
 <script>
-// === REPLACE WITH YOUR OWN Firebase Config ===
-const firebaseConfig = {
-  apiKey: "AIzaSyCOyayGUYBREEok4rTLJIQAv-8iIvJn-VE",
-  authDomain: "mahadeb-schedule.firebaseapp.com",
-  databaseURL: "https://mahadeb-schedule-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "mahadeb-schedule",
-  storageBucket: "mahadeb-schedule.firebasestorage.app",
-  messagingSenderId: "644636693352",
-  appId: "1:644636693352:web:816f7105c4158165a1fcdd",
-  measurementId: "G-46S6QYBKX3"
-};
+  // === Your Firebase Config ===
+  const firebaseConfig = {
+    apiKey: "AIzaSyCOyayGUYBREEok4rTLJIQAv-8iIvJn-VE",
+    authDomain: "mahadeb-schedule.firebaseapp.com",
+    databaseURL: "https://mahadeb-schedule-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "mahadeb-schedule",
+    storageBucket: "mahadeb-schedule.firebasestorage.app",
+    messagingSenderId: "644636693352",
+    appId: "1:644636693352:web:816f7105c4158165a1fcdd",
+    measurementId: "G-46S6QYBKX3"
+  };
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-const auth = firebase.auth();
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  const auth = firebase.auth();
 
-let calendar;
-document.addEventListener('DOMContentLoaded', function() {
-  const protected = document.getElementById('protected');
-  const authPanel = document.getElementById('auth-panel');
-  const eventsDiv = document.getElementById('events');
-  const calendarDiv = document.getElementById('calendar');
+  const ALLOWED_EMAIL = "wbmm2017@gmail.com"; // only this user can see the schedule
 
-  auth.onAuthStateChanged(user => {
-    if (user && user.email === "wbmm2017@gmail.com") {
-      authPanel.style.display = 'none';
-      protected.style.display = 'block';
-      document.getElementById('logout-btn').style.display = 'inline-block';
-      loadEvents();
-    } else {
-      authPanel.style.display = 'block';
-      protected.style.display = 'none';
-      document.getElementById('logout-btn').style.display = 'none';
+  let calendar;
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const protectedDiv = document.getElementById('protected');
+    const authPanel = document.getElementById('auth-panel');
+    const eventsDiv = document.getElementById('events');
+    const calendarDiv = document.getElementById('calendar');
+    const statusText = document.getElementById('auth-status');
+
+    auth.onAuthStateChanged(user => {
+      if (user && user.email === ALLOWED_EMAIL) {
+        authPanel.style.display = 'none';
+        protectedDiv.style.display = 'block';
+        document.getElementById('logout-btn').style.display = 'inline-block';
+        statusText.textContent = "Signed in as " + user.email;
+        loadEvents();
+      } else if (user) {
+        // logged in but not the allowed account
+        statusText.textContent = "This page is restricted. Use the authorised email only.";
+        authPanel.style.display = 'block';
+        protectedDiv.style.display = 'none';
+        document.getElementById('logout-btn').style.display = 'inline-block';
+      } else {
+        statusText.textContent = "Sign in to view your personal schedule.";
+        authPanel.style.display = 'block';
+        protectedDiv.style.display = 'none';
+        document.getElementById('logout-btn').style.display = 'none';
+      }
+    });
+
+    document.getElementById('login-btn').onclick = function () {
+      const email = document.getElementById('email').value.trim();
+      const pass = document.getElementById('password').value;
+      auth.signInWithEmailAndPassword(email, pass)
+        .catch(e => alert(e.message));
+    };
+
+    document.getElementById('signup-btn').onclick = function () {
+      const email = document.getElementById('email').value.trim();
+      const pass = document.getElementById('password').value;
+
+      if (email !== ALLOWED_EMAIL) {
+        alert("For security, use only the authorised email: " + ALLOWED_EMAIL);
+        return;
+      }
+
+      auth.createUserWithEmailAndPassword(email, pass)
+        .catch(e => alert(e.message));
+    };
+
+    document.getElementById('logout-btn').onclick = function () {
+      auth.signOut();
+    };
+
+    document.getElementById('btn-list').onclick = function () {
+      eventsDiv.style.display = 'block';
+      calendarDiv.style.display = 'none';
+      this.classList.add('active');
+      document.getElementById('btn-cal').classList.remove('active');
+    };
+
+    document.getElementById('btn-cal').onclick = function () {
+      eventsDiv.style.display = 'none';
+      calendarDiv.style.display = 'block';
+      this.classList.add('active');
+      document.getElementById('btn-list').classList.remove('active');
+      initCalendar();
+    };
+
+    // (optional) stub for Export .ics button – you can implement later
+    document.getElementById('btn-ics').onclick = function () {
+      alert("ICS export not implemented yet.");
+    };
+
+    function loadEvents() {
+      db.collection('events').orderBy('start', 'asc').get().then(snapshot => {
+        const events = [];
+        snapshot.forEach(doc => events.push({ id: doc.id, ...doc.data() }));
+        renderList(events);
+        window.allEvents = events;
+      }).catch(err => {
+        console.error(err);
+        eventsDiv.innerHTML = "<p>Failed to load events.</p>";
+      });
     }
-  });
 
-  document.getElementById('login-btn').onclick = () => {
-    const email = document.getElementById('email').value;
-    const pass = document.getElementById('password').value;
-    auth.signInWithEmailAndPassword(email, pass).catch(e => alert(e.message));
-  };
+    function renderList(events) {
+      eventsDiv.innerHTML = events.length === 0 ? '<p>No upcoming events.</p>' : '';
+      events.forEach(ev => {
+        const div = document.createElement('div');
+        div.style = 'padding:1rem;margin:1rem 0;background:var(--bg-soft);border-radius:12px;border-left:5px solid var(--brand-600);';
+        const start = ev.start ? new Date(ev.start).toLocaleString() : '';
+        const end   = ev.end   ? new Date(ev.end).toLocaleString()   : '';
+        div.innerHTML = `<strong>${ev.title || '(No title)'}</strong><br>
+                         <small>${start}${end ? ' – ' + end : ''}</small>
+                         <p>${ev.description || ''}</p>`;
+        eventsDiv.appendChild(div);
+      });
+    }
 
-  document.getElementById('signup-btn').onclick = () => {
-    const email = document.getElementById('email').value;
-    const pass = document.getElementById('password').value;
-    auth.createUserWithEmailAndPassword(email, pass).catch(e => alert(e.message));
-  };
-
-  document.getElementById('logout-btn').onclick = () => auth.signOut();
-
-  document.getElementById('btn-list').onclick = () => { eventsDiv.style.display = 'block'; calendarDiv.style.display = 'none'; this.classList.add('active'); document.getElementById('btn-cal').classList.remove('active'); }
-  document.getElementById('btn-cal').onclick = () => { eventsDiv.style.display = 'none'; calendarDiv.style.display = 'block'; this.classList.add('active'); document.getElementById('btn-list').classList.remove('active'); initCalendar(); }
-
-  function loadEvents() {
-    db.collection('events').orderBy('start', 'asc').get().then(snapshot => {
-      const events = [];
-      snapshot.forEach(doc => events.push({id: doc.id, ...doc.data()}));
-      renderList(events);
-      window.allEvents = events;
-    });
-  }
-
-  function renderList(events) {
-    eventsDiv.innerHTML = events.length === 0 ? '<p>No upcoming events.</p>' : '';
-    events.forEach(ev => {
-      const div = document.createElement('div');
-      div.style = 'padding:1rem;margin:1rem 0;background:var(--bg-soft);border-radius:12px;border-left:5px solid var(--brand-600);';
-      div.innerHTML = `<strong>${ev.title}</strong><br><small>${new Date(ev.start).toLocaleString()} – ${ev.end ? new Date(ev.end).toLocaleString() : ''}</small><p>${ev.description || ''}</p>`;
-      eventsDiv.appendChild(div);
-    });
-  }
-
-  function initCalendar() {
-    if (calendar) return;
-    calendar = new FullCalendar.Calendar(calendarDiv, {
-      initialView: 'dayGridMonth',
-      events: window.allEvents.map(e => ({
+    function initCalendar() {
+      if (calendar) return;
+      const events = (window.allEvents || []).map(e => ({
         title: e.title,
         start: e.start,
         end: e.end,
         description: e.description
-      })),
-      headerToolbar: { left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek' }
-    });
-    calendar.render();
-  }
-});
+      }));
+
+      calendar = new FullCalendar.Calendar(calendarDiv, {
+        initialView: 'dayGridMonth',
+        events: events,
+        headerToolbar: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'dayGridMonth,timeGridWeek'
+        }
+      });
+      calendar.render();
+    }
+  });
 </script>
