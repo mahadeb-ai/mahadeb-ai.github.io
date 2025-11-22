@@ -4,263 +4,249 @@ title: Home
 last_modified_at: 2025-09-01
 ---
 
-<div id="home-page-v4">
+<div id="home-page-v5">
 
-  <!-- ============= HERO / HEADER STRIP ============= -->
-  <section class="v4-hero" data-aos="fade-up">
-    <div class="v4-name-block">
-      <h1 class="v4-name">Mahadeb Mandal</h1>
-      <p class="v4-role">Research Scholar · Interdisciplinary Graduate College</p>
-      <p class="v4-inst"><strong>Nanyang Technological University, Singapore</strong></p>
-    </div>
-  </section>
+  <div class="v5-paper">
 
-  <!-- ============= MAIN GRID ============= -->
-  <section class="v4-main" data-aos="fade-in">
-    <!-- Left column: photo + contact -->
-    <aside class="v4-sidebar">
+    <!-- ============= HEADER STRIP ============= -->
+    <header class="v5-header" data-aos="fade-down">
+      <div>
+        <h1 class="v5-name">Mahadeb Mandal</h1>
+        <p class="v5-role">Research Scholar · Interdisciplinary Graduate College</p>
+        <p class="v5-inst"><strong>Nanyang Technological University, Singapore</strong></p>
+      </div>
+      <div class="v5-contact">
+        <div>📍 SPMS-MAS-04-02, Table 9</div>
+        <div>📧 <a href="mailto:mahadeb001@e.ntu.edu.sg">mahadeb001@e.ntu.edu.sg</a></div>
+      </div>
+    </header>
+
+    <hr class="v5-rule" />
+
+    <!-- ============= PROFILE ROW ============= -->
+    <section class="v5-profile-row" data-aos="fade-up">
       <img src="/assets/images/profile.png"
            alt="Profile Photo"
-           class="v4-photo" />
-
-      <div class="v4-contact-block">
-        <h2 class="v4-subheading">Contact</h2>
-        <p class="v4-contact">
-          📍 Lab office: SPMS-MAS-04-02, Table 9<br>
-          📧 <a href="mailto:mahadeb001@e.ntu.edu.sg">mahadeb001@e.ntu.edu.sg</a>
+           class="v5-photo" />
+      <div class="v5-profile-text">
+        <p class="v5-tagline">
+          PhD student working at the interface of <strong>Topological Data Analysis</strong>,
+          <strong>Deep Learning</strong>, and <strong>Mathematical AI</strong>.
         </p>
       </div>
+    </section>
 
-      <div class="v4-meta-block">
-        <h2 class="v4-subheading">Affiliation</h2>
-        <p class="v4-meta">
-          Interdisciplinary Graduate College<br>
-          Nanyang Technological University (NTU), Singapore
-        </p>
-      </div>
-    </aside>
+    <!-- ============= ABOUT ============= -->
+    <section class="v5-section" data-aos="fade-in">
+      <h2 class="v5-heading">About</h2>
+      <p class="v5-body-text">
+        Mahadeb Mandal is a second-year PhD student at
+        <strong>Nanyang Technological University (NTU), Singapore</strong>,
+        working under the supervision of
+        <a href="https://personal.ntu.edu.sg/xiakelin/index.html"><strong>Prof. Kelin Xia</strong></a>.
+        His academic journey is driven by a deep passion for mathematics and artificial intelligence.
+        His current research focuses on the powerful intersection of
+        <strong>Topological Data Analysis (TDA)</strong>
+        and <strong>Deep Learning</strong>, aiming to uncover meaningful geometric and
+        topological structures in complex data to advance scientific discovery and intelligent systems.
+      </p>
+    </section>
 
-    <!-- Right column: about + research interests -->
-    <div class="v4-content">
-      <section class="v4-section">
-        <h2 class="v4-section-title">About</h2>
-        <p class="v4-text">
-          Mahadeb Mandal is a second-year PhD student at
-          <strong>Nanyang Technological University (NTU), Singapore</strong>,
-          working under the supervision of
-          <a href="https://personal.ntu.edu.sg/xiakelin/index.html"><strong>Prof. Kelin Xia</strong></a>.
-          His academic journey is driven by a deep passion for mathematics and artificial intelligence.
-          His current research focuses on the powerful intersection of
-          <strong>Topological Data Analysis (TDA)</strong>
-          and <strong>Deep Learning</strong>, aiming to uncover meaningful geometric and
-          topological structures in complex data to advance scientific discovery and intelligent systems.
-        </p>
-      </section>
+    <!-- ============= RESEARCH INTERESTS ============= -->
+    <section class="v5-section" data-aos="fade-up">
+      <h2 class="v5-heading">Research Interests</h2>
+      <ul class="v5-list">
+        <li>Topological Data Analysis (TDA)</li>
+        <li>Deep Learning for Scientific Material Discovery</li>
+        <li>Mathematical AI</li>
+      </ul>
+    </section>
 
-      <section class="v4-section">
-        <h2 class="v4-section-title">Research Interests</h2>
-        <ul class="v4-interest-list">
-          <li>Topological Data Analysis (TDA)</li>
-          <li>Deep Learning for Scientific Material Discovery</li>
-          <li>Mathematical AI</li>
-        </ul>
-      </section>
-    </div>
-  </section>
+  </div>
 
 </div>
 
 <style>
-  /* ============== Global Wrapper ============== */
-  #home-page-v4 {
-    max-width: 1020px;
-    margin: 2rem auto 3rem;
-    padding: 0 1.3rem;
+  /* ========= Page background & shell ========= */
+  #home-page-v5 {
     font-family: "Times New Roman", Times, serif;
+    min-height: 60vh;
+    padding: 2rem 0;
     position: relative;
     z-index: 1;
+    background: radial-gradient(circle at top, #f3f4f6 0, #e5e7eb 28%, #f9fafb 100%);
   }
 
-  a {
-    color: #1d4ed8;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* ============== Hero strip ============== */
-  .v4-hero {
-    border-bottom: 1px solid rgba(148,163,184,0.6);
-    padding-bottom: 0.9rem;
-    margin-bottom: 1.4rem;
+  .v5-paper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2.2rem 2.3rem;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 18px 40px rgba(15,23,42,0.12);
+    border: 1px solid rgba(209,213,219,0.8);
   }
 
-  .v4-name-block {
-    border-left: 4px solid #4a6bff;
-    padding-left: 0.9rem;
+  /* ========= Header strip ========= */
+  .v5-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: flex-start;
   }
 
-  .v4-name {
+  .v5-name {
     margin: 0;
-    font-size: 2.1rem;
+    font-size: 2.0rem;
     color: #111827;
   }
 
-  .v4-role {
+  .v5-role {
     margin: 0.35rem 0 0.1rem;
-    font-size: 1rem;
+    font-size: 0.98rem;
     color: #374151;
   }
 
-  .v4-inst {
+  .v5-inst {
     margin: 0.1rem 0 0;
-    font-size: 0.98rem;
+    font-size: 0.96rem;
     color: #4b5563;
   }
 
-  /* ============== Main grid ============== */
-  .v4-main {
+  .v5-contact {
+    font-size: 0.9rem;
+    color: #4b5563;
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  .v5-contact a {
+    color: #1d4ed8;
+    text-decoration: none;
+  }
+
+  .v5-contact a:hover {
+    text-decoration: underline;
+  }
+
+  .v5-rule {
+    margin: 1.4rem 0 1.7rem;
+    border: none;
+    border-top: 1px solid rgba(209,213,219,0.9);
+  }
+
+  /* ========= Profile row ========= */
+  .v5-profile-row {
     display: grid;
-    grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
-    gap: 2.2rem;
-    margin-top: 1.2rem;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.4rem;
+    align-items: center;
+    margin-bottom: 1.8rem;
   }
 
-  /* Sidebar */
-  .v4-sidebar {
-    border-right: 1px solid rgba(148,163,184,0.4);
-    padding-right: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
-  }
-
-  .v4-photo {
-    width: 170px;
-    height: 170px;
+  .v5-photo {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    display: block;
-    margin-bottom: 0.5rem;
-    box-shadow: 0 8px 24px rgba(15,23,42,0.22);
+    box-shadow: 0 10px 28px rgba(15,23,42,0.28);
   }
 
-  .v4-subheading {
-    margin: 0 0 0.25rem;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #6b7280;
-  }
-
-  .v4-contact,
-  .v4-meta {
-    margin: 0;
-    font-size: 0.9rem;
+  .v5-profile-text {
+    font-size: 0.98rem;
     color: #374151;
-    line-height: 1.6;
   }
 
-  .v4-contact-block,
-  .v4-meta-block {
-    padding-top: 0.2rem;
+  .v5-tagline {
+    margin: 0;
+    font-style: italic;
+    line-height: 1.7;
   }
 
-  /* Right column */
-  .v4-content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
+  /* ========= Sections ========= */
+  .v5-section {
+    margin-top: 1.8rem;
   }
 
-  .v4-section {
-    padding-bottom: 0.8rem;
-    border-bottom: 1px solid rgba(226,232,240,0.9);
-  }
-
-  .v4-section:last-of-type {
-    border-bottom: none;
-  }
-
-  .v4-section-title {
+  .v5-heading {
     margin: 0 0 0.6rem;
     font-size: 1.3rem;
     color: #111827;
   }
 
-  .v4-text {
+  .v5-body-text {
     margin: 0;
     font-size: 1.02rem;
     line-height: 1.8;
     color: #374151;
   }
 
-  .v4-interest-list {
-    list-style: disc;
+  .v5-body-text a {
+    color: #1d4ed8;
+    text-decoration: none;
+  }
+
+  .v5-body-text a:hover {
+    text-decoration: underline;
+  }
+
+  .v5-list {
     margin: 0.2rem 0 0;
     padding-left: 1.2rem;
-    font-size: 1rem;
+    font-size: 1.0rem;
     color: #374151;
     line-height: 1.7;
   }
 
-  /* ============== NTU Watermark ============== */
+  /* ========= NTU watermark (subtle) ========= */
   body::before {
     content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 13vw;
-    height: 15vh;
+    top: 0.6rem;
+    left: 0.8rem;
+    width: 80px;
+    height: 80px;
     background-image: url('/assets/images/ntu_logo.png');
     background-repeat: no-repeat;
-    background-position: center 95%;
-    background-size: 55px;
-    opacity: 0.05;
+    background-position: center;
+    background-size: 60px;
+    opacity: 0.04;
     z-index: 0;
     pointer-events: none;
     user-select: none;
   }
 
-  /* ============== Responsive ============== */
+  /* ========= Responsive ========= */
   @media (max-width: 820px) {
-    .v4-main {
-      grid-template-columns: 1fr;
-      gap: 1.4rem;
+    .v5-paper {
+      padding: 1.7rem 1.6rem;
     }
-    .v4-sidebar {
-      border-right: none;
-      border-bottom: 1px solid rgba(148,163,184,0.35);
-      padding-right: 0;
-      padding-bottom: 1.2rem;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 1.2rem;
+    .v5-header {
+      flex-direction: column;
       align-items: flex-start;
     }
-    .v4-photo {
-      width: 140px;
-      height: 140px;
-      margin-right: 0.8rem;
+    .v5-contact {
+      text-align: left;
+    }
+    .v5-profile-row {
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+    .v5-photo {
+      width: 130px;
+      height: 130px;
     }
   }
 
   @media (max-width: 540px) {
-    #home-page-v4 {
-      padding: 0 0.9rem;
+    .v5-paper {
+      padding: 1.5rem 1.2rem;
     }
-    .v4-name {
+    .v5-name {
       font-size: 1.7rem;
     }
-    .v4-main {
-      margin-top: 1rem;
-    }
-    .v4-sidebar {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .v4-text {
+    .v5-body-text,
+    .v5-list {
       font-size: 0.95rem;
     }
   }
