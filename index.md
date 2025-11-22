@@ -5,7 +5,7 @@ last_modified_at: 2025-09-01
 ---
 
 <!-- Main content -->
-<div align="center">
+<div align="center" data-aos="zoom-in">
   <img src="assets/images/profile.png" alt="Profile Photo" width="180" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
   
   <h1>Mahadeb Mandal</h1>
