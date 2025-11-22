@@ -12,7 +12,7 @@ permalink: /events/
     <div class="ev-hero-header">
       <div>
         <span class="ev-badge">Talks &amp; Events</span>
-        <h1>🎤 Talks &amp; Workshops</h1>
+        <h1>Talks &amp; Workshops</h1>
       </div>
       <div class="ev-hero-meta">
         <div class="ev-pill">
@@ -43,11 +43,11 @@ permalink: /events/
       <article class="ev-item">
         <header class="ev-item-header">
           <span class="ev-item-label">Group Meeting</span>
-          <span class="ev-item-date">1st week of Aug, 2025</span>
+          <span class="ev-item-date">Oct, 2025</span>
         </header>
         <h3 class="ev-item-title">Current Research Progress</h3>
         <p class="ev-item-venue">Prof. Xia&apos;s Group Meeting, NTU</p>
-        <p class="ev-item-note">Overview of ongoing work at the intersection of TDA and AI. ❗</p>
+        <p class="ev-item-note">Overview of ongoing work at the intersection of TDA and AI. </p>
       </article>
 
       <article class="ev-item">
