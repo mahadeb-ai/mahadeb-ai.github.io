@@ -121,26 +121,34 @@ permalink: /cv/
     <div class="cv-grid">
 
       <article class="cv-ach-item">
-        <h3>GATE – Data Science &amp; AI</h3>
-        <p class="cv-item-year">2024</p>
+        <div class="cv-ach-header">
+          <h3>GATE – Data Science &amp; AI</h3>
+          <span class="cv-ach-year">2024</span>
+        </div>
         <p class="cv-item-note">Conducted by IISc Bangalore</p>
       </article>
 
       <article class="cv-ach-item">
-        <h3>GATE – Mathematics</h3>
-        <p class="cv-item-year">2023</p>
+        <div class="cv-ach-header">
+          <h3>GATE – Mathematics</h3>
+          <span class="cv-ach-year">2023</span>
+        </div>
         <p class="cv-item-note">All India Rank: 154 · Conducted by IIT Kanpur</p>
       </article>
 
       <article class="cv-ach-item">
-        <h3>IIT JAM – Mathematics</h3>
-        <p class="cv-item-year">2022</p>
+        <div class="cv-ach-header">
+          <h3>IIT JAM – Mathematics</h3>
+          <span class="cv-ach-year">2022</span>
+        </div>
         <p class="cv-item-note">All India Rank: 111 · Conducted by IIT Roorkee</p>
       </article>
 
       <article class="cv-ach-item">
-        <h3>Madhava Mathematics Competition</h3>
-        <p class="cv-item-year">2022</p>
+        <div class="cv-ach-header">
+          <h3>Madhava Mathematics Competition</h3>
+          <span class="cv-ach-year">2022</span>
+        </div>
         <p class="cv-item-note">Top 50 Students · Conducted by HBCSE, TIFR &amp; S.P. College, Pune</p>
       </article>
 
@@ -308,7 +316,7 @@ permalink: /cv/
     color: #6b7280;
   }
 
-  /* Awards + Achievements */
+  /* Awards */
   .cv-list {
     list-style: none;
     padding: 0;
@@ -342,26 +350,40 @@ permalink: /cv/
   }
 
   .cv-ach-item {
-    padding: 0.9rem;
+    padding: 1.1rem 1.2rem;
     border-radius: 14px;
     background: rgba(248,250,252,0.9);
-    border: 1px solid rgba(148,163,184,0.4);
+    border: 1px solid rgba(148,163,184,0.35);
+    position: relative;
+  }
+
+  .cv-ach-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.35rem;
   }
 
   .cv-ach-item h3 {
-    margin: 0 0 0.2rem;
-    font-size: 0.95rem;
+    margin: 0;
+    font-size: 0.97rem;
+    font-weight: 600;
     color: #111827;
   }
 
-  .cv-item-year {
-    font-size: 0.78rem;
-    color: #64748b;
+  .cv-ach-year {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #475569;
+    padding: 0.15rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(148,163,184,0.15);
   }
 
   .cv-item-note {
-    font-size: 0.82rem;
+    font-size: 0.86rem;
     color: #4b5563;
+    margin: 0;
   }
 
   .cv-footnote {
