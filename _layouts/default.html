@@ -11,9 +11,6 @@
 
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
 
-  <!-- THIS IS THE FIX – Official Font Awesome Kit (never fails) -->
-  <script src="https://kit.fontawesome.com/2f5e0c2c6f.js" crossorigin="anonymous"></script>
-
   <style>
     :root{--brand-600:#4a6bff;--brand-700:#3b55d6;--brand-200:#e7ecff;--txt-900:#0f172a;--txt-700:#334155;--txt-500:#64748b;--bg:#ffffff;--bg-soft:#f8fafc;--shadow:0 10px 25px rgba(2,6,23,.08)}
     @media (prefers-color-scheme: dark){
@@ -57,9 +54,7 @@
           <span>{{ site.title }}</span>
         </a>
 
-        <label class="hamburger" for="nav-toggle" aria-label="Toggle menu">
-          <i class="fa-solid fa-bars"></i>
-        </label>
+        <label class="hamburger" for="nav-toggle" aria-label="Toggle menu">Menu</label>
         <input type="checkbox" id="nav-toggle" hidden>
         <nav class="menu">
           {% for item in site.nav %}
@@ -68,7 +63,7 @@
         </nav>
 
         <div class="clock" aria-live="polite">Time: <span id="live-clock"></span></div>
-        <button id="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+        <button id="theme-toggle" aria-label="Toggle dark mode">Moon</button>
       </div>
     </header>
 
@@ -76,38 +71,39 @@
       {{ content }}
     </main>
 
-    <!-- FOOTER WITH REAL ICONS (100% WORKING) -->
+    <!-- FOOTER WITH SVG ICONS (100% GUARANTEED TO SHOW) -->
     <footer style="margin-top:5rem;padding:4rem 0;background:var(--bg-soft);border-top:1px solid rgba(100,116,139,.15);text-align:center;">
       <div class="container">
 
-        <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin:2rem 0;">
+        <div style="display:flex;justify-content:center;gap:36px;flex-wrap:wrap;margin:2rem 0;">
+          
           <!-- LinkedIn -->
           <a href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" rel="noopener" aria-label="LinkedIn"
-             style="width:60px;height:60px;border-radius:50%;background:#0A66C2;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(10,102,194,.4);transition:all .3s;">
-            <i class="fa-brands fa-linkedin-in fa-xl"></i>
+             style="width:62px;height:62px;border-radius:50%;background:#0A66C2;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(10,102,194,.4);transition:all .3s;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="white"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
           </a>
 
-          <!-- Google Scholar (replace YOUR_ID with real one) -->
+          <!-- Google Scholar -->
           <a href="https://scholar.google.com/citations?user=YOUR_ID_HERE" target="_blank" rel="noopener" aria-label="Google Scholar"
-             style="width:60px;height:60px;border-radius:50%;background:#4285F4;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(66,133,244,.4);transition:all .3s;">
-            <i class="fa-solid fa-graduation-cap fa-xl"></i>
+             style="width:62px;height:62px;border-radius:50%;background:#4285F4;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(66,133,244,.4);transition:all .3s;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="white"><path d="M12 24c6.629 0 12-5.371 12-12s-5.371-12-12-12-12 5.371-12 12 5.371 12 12 12zm-1.5-17.5l4.427 2.496c1.377-1.406 3.573-1.406 4.95 0 1.377 1.406 1.377 3.684 0 5.09l-4.427 2.496c-1.377 1.406-3.573 1.406-4.95 0-1.377-1.406-1.377-3.684 0-5.09zm-4.5 3.5c0-1.933 1.567-3.5 3.5-3.5v7c-1.933 0-3.5-1.567-3.5-3.5zm11 0c0 1.933-1.567 3.5-3.5 3.5v-7c1.933 0 3.5 1.567 3.5 3.5z"/></svg>
           </a>
 
           <!-- ResearchGate -->
           <a href="https://www.researchgate.net/profile/Mahadeb-Mandal" target="_blank" rel="noopener" aria-label="ResearchGate"
-             style="width:60px;height:60px;border-radius:50%;background:#00CCBB;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,204,187,.4);transition:all .3s;">
-            <i class="fa-brands fa-researchgate fa-xl"></i>
+             style="width:62px;height:62px;border-radius:50%;background:#00CCBB;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,204,187,.4);transition:all .3s;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="white"><path d="M12.018 2c-5.525 0-10.018 4.493-10.018 10.018 0 5.525 4.493 10.018 10.018 10.018 5.525 0 10.018-4.493 10.018-10.018 0-5.525-4.493-10.018-10.018-10.018zm-2.54 14.697h-1.606v-5.258h1.606v5.258zm-.803-5.973c-.553 0-1-.447-1-1 0-.553.447-1 1-1 .553 0 1 .447 1 1 0 .553-.447 1-1 1zm4.346 5.973h-1.607v-2.861c0-.681-.024-1.56-1.005-1.56-.803 0-1.326.77-1.326 1.56v2.861h-1.606v-5.258h1.542v.719h.021c.203-.385.698-1.01 1.52-1.01 1.627 0 1.929 1.07 1.929 2.463v2.086h-.068z"/></svg>
           </a>
 
           <!-- GitHub -->
           <a href="https://github.com/mahadeb-ai" target="_blank" rel="noopener" aria-label="GitHub"
-             style="width:60px;height:60px;border-radius:50%;background:#181717;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(24,23,23,.6);transition:all .3s;">
-            <i class="fa-brands fa-github fa-xl"></i>
+             style="width:62px;height:62px;border-radius:50%;background:#181717;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(24,23,23,.6);transition:all .3s;">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           </a>
         </div>
 
         <style>
-          footer a:hover {transform:translateY(-10px) scale(1.15);box-shadow:0 20px 40px rgba(0,0,0,.5)!important}
+          footer a:hover {transform:translateY(-10px) scale(1.15);box-shadow:0 24px 48px rgba(0,0,0,.5)!important}
         </style>
 
         <div style="color:var(--txt-500);font-size:.95rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(100,116,139,.1);">
@@ -118,15 +114,12 @@
   </div>
 
   <script>
-    // Live Clock
     const c = document.getElementById('live-clock');
-    if(c){const t=()=>{c.textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',second:'2-digit'})};t();setInterval(t,1000);}
-
-    // Theme Toggle
+    if(c){const t=()=>{c.textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})};t();setInterval(t,1000);}
     const btn = document.getElementById('theme-toggle');
     const root = document.documentElement;
     const key = 'mm-theme';
-    const apply = (m) => { root.dataset.theme = m; btn.innerHTML = m==='dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>'; };
+    const apply = (m) => { root.dataset.theme = m; btn.textContent = m==='dark'?'Sun':'Moon'; };
     const saved = localStorage.getItem(key) || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     apply(saved);
     btn.onclick = () => { const next = root.dataset.theme==='dark'?'light':'dark'; localStorage.setItem(key,next); apply(next); };
