@@ -12,7 +12,7 @@ permalink: /teaching/
     <div class="teach-hero-header">
       <div>
         <span class="teach-badge">Teaching & Mentoring</span>
-        <h1>📚 Teaching</h1>
+        <h1>Teaching</h1>
       </div>
       <div class="teach-hero-meta">
         <div class="teach-pill">
@@ -42,20 +42,20 @@ permalink: /teaching/
     <div class="teach-grid">
       <article class="teach-course">
         <div class="teach-course-header">
-          <span class="teach-course-code">MA0002</span>
+          <span class="teach-course-code">MAXXX</span>
           <span class="teach-tag">Teaching Assistant</span>
         </div>
-        <h3 class="teach-course-title">Linear Algebra &amp; Differential Equations</h3>
-        <p class="teach-course-meta">Nanyang Technological University · 2024</p>
+        <h3 class="teach-course-title">XXX &amp; XXX</h3>
+        <p class="teach-course-meta">Nanyang Technological University · 20XX</p>
       </article>
 
       <article class="teach-course">
         <div class="teach-course-header">
-          <span class="teach-course-code">MA1008</span>
+          <span class="teach-course-code">MAXXXX</span>
           <span class="teach-tag">Teaching Assistant</span>
         </div>
-        <h3 class="teach-course-title">Mathematics I</h3>
-        <p class="teach-course-meta">Nanyang Technological University · 2024</p>
+        <h3 class="teach-course-title">XXXX</h3>
+        <p class="teach-course-meta">Nanyang Technological University · 20XX</p>
       </article>
 
       <article class="teach-course">
@@ -63,35 +63,13 @@ permalink: /teaching/
           <span class="teach-course-code">Workshop</span>
           <span class="teach-tag teach-tag-alt">Student Mentor</span>
         </div>
-        <h3 class="teach-course-title">Advanced Mathematics Workshop</h3>
-        <p class="teach-course-meta">IIT Bombay · 2023</p>
+        <h3 class="teach-course-title">XXXX</h3>
+        <p class="teach-course-meta">IIT Bombay · 20XX</p>
       </article>
     </div>
   </section>
 
-  <!-- Mentoring -->
-  <section class="teach-card">
-    <div class="teach-section-header">
-      <h2>Mentoring</h2>
-      <p class="teach-section-subtitle">Guiding students beyond the classroom.</p>
-    </div>
-
-    <ul class="teach-list">
-      <li>
-        <span class="teach-bullet-dot"></span>
-        <span>Supervised 2 undergraduate students in research projects.</span>
-      </li>
-      <li>
-        <span class="teach-bullet-dot"></span>
-        <span>Conducted weekly problem-solving sessions for junior students.</span>
-      </li>
-      <li>
-        <span class="teach-bullet-dot"></span>
-        <span>Organized study groups for complex mathematical concepts.</span>
-      </li>
-    </ul>
-  </section>
-
+ 
   <!-- Teaching Philosophy -->
   <section class="teach-card teach-philosophy">
     <div class="teach-section-header">
