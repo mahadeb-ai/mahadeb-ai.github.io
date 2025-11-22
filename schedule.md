@@ -7,7 +7,7 @@ robots: noindex
 ---
 
 <div id="schedule-app" style="max-width:960px;margin:2rem auto;padding:1rem;">
-  <div id="auth-panel" style="background:var(--bg);border:1px solid rgba(100,116,139,.2);border-radius:16px;padding:2rem;box-shadow:var(--shadow);">
+  <div id="auth-panel" style="background:var(--bg);border:1px solid rgba(100,116,139,.2);border-radius:16px;padding:2rem;box-shadow:var(--shadow);" data-aos="fade-right">
     <h3 style="color:var(--brand-600);margin-bottom:1rem;">Private Schedule Login</h3>
     <p id="auth-status" style="color:var(--txt-500);margin-bottom:1.5rem;">Sign in to view your personal schedule.</p>
     <div id="login-form">
@@ -19,7 +19,7 @@ robots: noindex
     </div>
   </div>
 
-  <div id="protected" style="display:none;margin-top:2rem;">
+  <div id="protected" style="display:none;margin-top:2rem;" data-aos="fade-left">
     <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1rem;">
       <h3 style="color:var(--brand-600);">My Upcoming Schedule</h3>
       <div>
