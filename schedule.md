@@ -50,12 +50,14 @@ robots: noindex
 <script>
 // === REPLACE WITH YOUR OWN Firebase Config ===
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "your-project.firebaseapp.com",
-  projectId: "your-project",
-  storageBucket: "your-project.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abc123"
+  apiKey: "AIzaSyCOyayGUYBREEok4rTLJIQAv-8iIvJn-VE",
+  authDomain: "mahadeb-schedule.firebaseapp.com",
+  databaseURL: "https://mahadeb-schedule-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "mahadeb-schedule",
+  storageBucket: "mahadeb-schedule.firebasestorage.app",
+  messagingSenderId: "644636693352",
+  appId: "1:644636693352:web:816f7105c4158165a1fcdd",
+  measurementId: "G-46S6QYBKX3"
 };
 
 firebase.initializeApp(firebaseConfig);
