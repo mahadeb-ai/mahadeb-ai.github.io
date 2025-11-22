@@ -12,7 +12,7 @@ permalink: /cv/
     <div class="cv-hero-header">
       <div>
         <span class="cv-badge">Curriculum Vitae</span>
-        <h1>📄 Academic CV</h1>
+        <h1>Academic CV</h1>
       </div>
 
       <div class="cv-hero-meta">
@@ -129,13 +129,13 @@ permalink: /cv/
       <article class="cv-ach-item">
         <h3>GATE – Mathematics</h3>
         <p class="cv-item-year">2023</p>
-        <p class="cv-item-note">All India Rank: 154 · IIT Kanpur</p>
+        <p class="cv-item-note">All India Rank: 154 · Conducted by IIT Kanpur</p>
       </article>
 
       <article class="cv-ach-item">
         <h3>IIT JAM – Mathematics</h3>
         <p class="cv-item-year">2022</p>
-        <p class="cv-item-note">All India Rank: 111 · IIT Roorkee</p>
+        <p class="cv-item-note">All India Rank: 111 · Conducted by IIT Roorkee</p>
       </article>
 
       <article class="cv-ach-item">
