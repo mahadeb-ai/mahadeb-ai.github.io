@@ -4,8 +4,6 @@ last_modified_at: 2025-09-01
 robots: noindex
 ---
 
-# Schedule (Private)
-
 <div id="schedule-app">
   <!-- Auth Panel -->
   <div id="auth-panel" class="card auth-card">
