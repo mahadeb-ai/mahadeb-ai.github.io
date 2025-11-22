@@ -10,7 +10,7 @@ robots: noindex
     <div class="auth-header">
       <div class="auth-title-block">
         <span class="auth-badge">Private</span>
-        <h3>Login</h3>
+        <h2>Login</h2>
         <p id="auth-status">You must login to view your schedule.</p>
       </div>
       <div class="auth-icon">
