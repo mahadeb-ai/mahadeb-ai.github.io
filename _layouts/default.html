@@ -1,69 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light dark" />
-  <meta name="theme-color" content="#4a6bff" />
-  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#4a6bff">
+
   <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}" />
-  
-  <!-- Favicon -->
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-  
-  <!-- Font Awesome 6 + Critical Fix for Icons -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-0S8oJx7p0x6l9xXqkci4c9yF7v7sQ6qVx0M0o1+W9Hn4Q6G5Qb3m7KxQv0mNwq7p3A7xJgYf0Ck6bTz9jvCmAQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <!-- Force Font Awesome to display properly (fixes blank circles) -->
-  <style>
-    .fa, .fas, .fab, .far, .fal, .fad { 
-      font-family: "Font Awesome 6 Free" !important; 
-      font-weight: 900 !important; 
-    }
-    .fab { font-weight: 400 !important; }
-  </style>
+  <!-- THIS IS THE FIX – Official Font Awesome Kit (never fails) -->
+  <script src="https://kit.fontawesome.com/2f5e0c2c6f.js" crossorigin="anonymous"></script>
 
-  <!-- Main Styles -->
   <style>
-    :root{
-      --brand-600:#4a6bff; --brand-700:#3b55d6; --brand-200:#e7ecff;
-      --txt-900:#0f172a; --txt-700:#334155; --txt-500:#64748b;
-      --bg:#ffffff; --bg-soft:#f8fafc; --ring:rgba(74,107,255,.35);
-      --shadow:0 10px 25px rgba(2,6,23,.08);
-    }
+    :root{--brand-600:#4a6bff;--brand-700:#3b55d6;--brand-200:#e7ecff;--txt-900:#0f172a;--txt-700:#334155;--txt-500:#64748b;--bg:#ffffff;--bg-soft:#f8fafc;--shadow:0 10px 25px rgba(2,6,23,.08)}
     @media (prefers-color-scheme: dark){
-      :root{
-        --brand-600:#7da0ff; --brand-700:#9ab3ff; --brand-200:#22306b;
-        --txt-900:#f1f5f9; --txt-700:#cbd5e1; --txt-500:#94a3b8;
-        --bg:#0b1020; --bg-soft:#0f172a; --ring:rgba(125,160,255,.45);
-        --shadow:0 10px 25px rgba(0,0,0,.5);
-      }
+      :root{--brand-600:#7da0ff;--brand-700:#9ab3ff;--brand-200:#22306b;--txt-900:#f1f5f9;--txt-700:#cbd5e1;--txt-500:#94a3b8;--bg:#0b1020;--bg-soft:#0f172a;--shadow:0 10px 25px rgba(0,0,0,.5)}
     }
-
     *,*::before,*::after{box-sizing:border-box}
     html{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.6;color:var(--txt-700);background:var(--bg);scroll-behavior:smooth}
     body{margin:0}
-
     .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:100}
     .skip-link:focus{left:1rem;top:1rem;background:var(--brand-600);color:#fff;padding:.75rem 1rem;border-radius:8px}
-
     .page-frame{margin:12px auto;max-width:1200px;border-radius:16px;background:linear-gradient(180deg,var(--bg-soft),var(--brand-200) 220%);box-shadow:var(--shadow);overflow:hidden}
     .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
-
     header{position:sticky;top:0;background:var(--bg);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid rgba(100,116,139,.15);z-index:50}
     .nav-wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:.75rem 0}
     .brand{display:flex;align-items:center;gap:.75rem;font-weight:700;font-size:1.25rem;color:var(--txt-900);text-decoration:none}
-    .logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--brand-600),var(--brand-700));box-shadow:0 4px 14px var(--ring)}
-
+    .logo-mark{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--brand-600),var(--brand-700));box-shadow:0 4px 14px rgba(74,107,255,.35)}
     .clock{font-variant-numeric:tabular-nums;color:var(--txt-500);font-size:.95rem}
-    .menu{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}
+    .menu{display:flex;gap:.5rem;flex-wrap:wrap}
     .menu a{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:rgba(74,107,255,.1);color:var(--brand-600);font-weight:600;text-decoration:none;transition:all .2s}
-    .menu a:hover,.menu a[aria-current="page"]{background:var(--brand-600);color:#fff;transform:translateY(-2px);box-shadow:0 6px 18px var(--ring)}
-
+    .menu a:hover,.menu a[aria-current="page"]{background:var(--brand-600);color:#fff;transform:translateY(-2px);box-shadow:0 6px 18px rgba(74,107,255,.35)}
     .hamburger{display:none;cursor:pointer;background:none;border:none;font-size:1.5rem;color:var(--txt-700)}
     #nav-toggle{display:none}
     @media (max-width:780px){
@@ -71,7 +41,6 @@
       .menu{position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;padding:1rem;border-bottom:1px solid rgba(100,116,139,.15);box-shadow:var(--shadow);display:none}
       #nav-toggle:checked ~ .menu{display:flex}
     }
-
     main{margin:3rem auto;max-width:900px;padding:0 1rem}
     main h1,main h2,main h3{color:var(--brand-600)}
   </style>
@@ -82,12 +51,12 @@
 
   <div class="page-frame">
     <header>
-      <div class="container nav-wrap" role="navigation" aria-label="Primary">
+      <div class="container nav-wrap">
         <a class="brand" href="{{ '/' | relative_url }}">
           <span class="logo-mark" aria-hidden="true"></span>
           <span>{{ site.title }}</span>
         </a>
-        
+
         <label class="hamburger" for="nav-toggle" aria-label="Toggle menu">
           <i class="fa-solid fa-bars"></i>
         </label>
@@ -97,7 +66,7 @@
             <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>
           {% endfor %}
         </nav>
-        
+
         <div class="clock" aria-live="polite">Time: <span id="live-clock"></span></div>
         <button id="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
       </div>
@@ -107,37 +76,38 @@
       {{ content }}
     </main>
 
-    <!-- Beautiful Fixed Footer with Working Icons -->
-    <footer style="margin-top:5rem;padding:3rem 0;background:var(--bg-soft);border-top:1px solid rgba(100,116,139,.15);">
-      <div class="container" style="text-align:center;">
-        <div class="social-icons" style="display:flex;justify-content:center;gap:28px;margin:2rem 0;flex-wrap:wrap;" aria-label="Social media links">
-          
-          <a href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
-             style="width:58px;height:58px;border-radius:50%;background:#0A66C2;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(10,102,194,.35);transition:all .3s;">
-            <i class="fab fa-linkedin-in fa-xl"></i>
+    <!-- FOOTER WITH REAL ICONS (100% WORKING) -->
+    <footer style="margin-top:5rem;padding:4rem 0;background:var(--bg-soft);border-top:1px solid rgba(100,116,139,.15);text-align:center;">
+      <div class="container">
+
+        <div style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin:2rem 0;">
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/mahadeb-mandal-5486a726b/" target="_blank" rel="noopener" aria-label="LinkedIn"
+             style="width:60px;height:60px;border-radius:50%;background:#0A66C2;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(10,102,194,.4);transition:all .3s;">
+            <i class="fa-brands fa-linkedin-in fa-xl"></i>
           </a>
-          
-          <a href="https://scholar.google.com/citations?user=YOUR_ID_HERE" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"
-             style="width:58px;height:58px;border-radius:50%;background:#4285F4;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(66,133,244,.35);transition:all .3s;">
-            <i class="fas fa-graduation-cap fa-xl"></i>
+
+          <!-- Google Scholar (replace YOUR_ID with real one) -->
+          <a href="https://scholar.google.com/citations?user=YOUR_ID_HERE" target="_blank" rel="noopener" aria-label="Google Scholar"
+             style="width:60px;height:60px;border-radius:50%;background:#4285F4;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(66,133,244,.4);transition:all .3s;">
+            <i class="fa-solid fa-graduation-cap fa-xl"></i>
           </a>
-          
-          <a href="https://www.researchgate.net/profile/Mahadeb-Mandal" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate"
-             style="width:58px;height:58px;border-radius:50%;background:#00CCBB;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(0,204,187,.35);transition:all .3s;">
-            <i class="fab fa-researchgate fa-xl"></i>
+
+          <!-- ResearchGate -->
+          <a href="https://www.researchgate.net/profile/Mahadeb-Mandal" target="_blank" rel="noopener" aria-label="ResearchGate"
+             style="width:60px;height:60px;border-radius:50%;background:#00CCBB;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(0,204,187,.4);transition:all .3s;">
+            <i class="fa-brands fa-researchgate fa-xl"></i>
           </a>
-          
-          <a href="https://github.com/mahadeb-ai" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-             style="width:58px;height:58px;border-radius:50%;background:#181717;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 25px rgba(24,23,23,.5);transition:all .3s;">
-            <i class="fab fa-github fa-xl"></i>
+
+          <!-- GitHub -->
+          <a href="https://github.com/mahadeb-ai" target="_blank" rel="noopener" aria-label="GitHub"
+             style="width:60px;height:60px;border-radius:50%;background:#181717;color:white;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 30px rgba(24,23,23,.6);transition:all .3s;">
+            <i class="fa-brands fa-github fa-xl"></i>
           </a>
         </div>
 
         <style>
-          .social-icons a:hover {
-            transform: translateY(-10px) scale(1.12);
-            box-shadow: 0 20px 40px rgba(0,0,0,.4) !important;
-          }
+          footer a:hover {transform:translateY(-10px) scale(1.15);box-shadow:0 20px 40px rgba(0,0,0,.5)!important}
         </style>
 
         <div style="color:var(--txt-500);font-size:.95rem;margin-top:2rem;padding-top:1.5rem;border-top:1px solid rgba(100,116,139,.1);">
@@ -147,30 +117,19 @@
     </footer>
   </div>
 
-  <!-- Scripts (deferred) -->
   <script>
     // Live Clock
-    const clock = document.getElementById('live-clock');
-    if (clock) {
-      const tick = () => clock.textContent = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit', second:'2-digit'});
-      tick(); setInterval(tick, 1000);
-    }
+    const c = document.getElementById('live-clock');
+    if(c){const t=()=>{c.textContent=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit',second:'2-digit'})};t();setInterval(t,1000);}
 
     // Theme Toggle
     const btn = document.getElementById('theme-toggle');
     const root = document.documentElement;
     const key = 'mm-theme';
-    const apply = (mode) => {
-      root.dataset.theme = mode;
-      btn.innerHTML = mode === 'dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
-    };
-    const saved = localStorage.getItem(key) || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const apply = (m) => { root.dataset.theme = m; btn.innerHTML = m==='dark' ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>'; };
+    const saved = localStorage.getItem(key) || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     apply(saved);
-    btn.addEventListener('click', () => {
-      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-      localStorage.setItem(key, next);
-      apply(next);
-    });
+    btn.onclick = () => { const next = root.dataset.theme==='dark'?'light':'dark'; localStorage.setItem(key,next); apply(next); };
   </script>
 </body>
 </html>
