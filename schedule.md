@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const calendarDiv = document.getElementById('calendar');
 
   auth.onAuthStateChanged(user => {
-    if (user && user.email === "mahadeb001@e.ntu.edu.sg") {
+    if (user && user.email === "wbmm2017@gmail.com") {
       authPanel.style.display = 'none';
       protected.style.display = 'block';
       document.getElementById('logout-btn').style.display = 'inline-block';
