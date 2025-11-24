@@ -34,8 +34,24 @@
     .logo-mark:hover{transform: rotate(360deg);}
     .clock{font-variant-numeric:tabular-nums;color:var(--txt-500);font-size:.95rem; animation: pulse 2s infinite;}
     .menu{display:flex;gap:.5rem;flex-wrap:wrap}
-    .menu a{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:rgba(74,107,255,.1);color:var(--brand-600);font-weight:600;text-decoration:none;transition:all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);}
-    .menu a:hover,.menu a[aria-current="page"]{background:var(--brand-600);color:#fff;transform:translateY(-5px) rotate(0deg);box-shadow:0 6px 18px rgba(74,107,255,.35)}
+    .menu a {
+  padding: 0.5rem 0.75rem;
+  color: var(--txt-900);
+  font-weight: 600;
+  text-decoration: none;
+  background: none;
+  border-radius: 0;
+  transition: color 0.2s ease;
+}
+
+    .menu a:hover,
+    .menu a[aria-current="page"] {
+      color: var(--brand-600);
+      background: none;
+      box-shadow: none;
+      transform: none;
+    }
+
     .hamburger{display:none;cursor:pointer;background:none;border:none;font-size:1.5rem;color:var(--txt-700)}
     #nav-toggle{display:none}
     @media (max-width:780px){
