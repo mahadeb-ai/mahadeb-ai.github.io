@@ -1,15 +1,436 @@
-en: {
-  'home.heading': 'Welcome to my homepage',
-  'home.subtitle': 'AI, Mathematics and Materials Research',
-  ...
-},
-bn: {
-  'home.heading': 'আমার হোমপেইজে স্বাগতম',
-  'home.subtitle': 'এআই, গণিত ও উপকরণ গবেষণা',
-  ...
-},
-zh: {
-  'home.heading': '欢迎来到我的主页',
-  'home.subtitle': '人工智能、数学与材料研究',
-  ...
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#4a6bff">
+
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | truncate: 160 }}">
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+  <!-- AOS for animations -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <style>
+    :root{
+      --brand-600:#4a6bff;
+      --brand-700:#3b55d6;
+      --brand-200:#e7ecff;
+      --txt-900:#0f172a;
+      --txt-700:#334155;
+      --txt-500:#64748b;
+      --bg:#ffffff;
+      --bg-soft:#f8fafc;
+      --shadow:0 10px 25px rgba(2,6,23,.08);
+    }
+
+    /* Manual theme overrides (light / dark) */
+    :root[data-theme="light"]{
+      --brand-600:#4a6bff;
+      --brand-700:#3b55d6;
+      --brand-200:#e7ecff;
+      --txt-900:#0f172a;
+      --txt-700:#334155;
+      --txt-500:#64748b;
+      --bg:#ffffff;
+      --bg-soft:#f8fafc;
+      --shadow:0 10px 25px rgba(2,6,23,.08);
+    }
+
+    :root[data-theme="dark"]{
+      --brand-600:#7da0ff;
+      --brand-700:#9ab3ff;
+      --brand-200:#22306b;
+      --txt-900:#f1f5f9;
+      --txt-700:#cbd5e1;
+      --txt-500:#94a3b8;
+      --bg:#0b1020;
+      --bg-soft:#0f172a;
+      --shadow:0 10px 25px rgba(0,0,0,.5);
+    }
+
+    *,*::before,*::after{box-sizing:border-box}
+    html{font-family:"Times New Roman", Times, serif;line-height:1.6;color:var(--txt-700);background:var(--bg);scroll-behavior:smooth}
+    body{margin:0}
+    .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;z-index:100}
+    .skip-link:focus{left:1rem;top:1rem;background:var(--brand-600);color:#fff;padding:.75rem 1rem;border-radius:8px}
+    .page-frame{margin:12px auto;max-width:1200px;border-radius:16px;background:linear-gradient(180deg,var(--bg-soft),var(--brand-200) 220%);box-shadow:var(--shadow);overflow:hidden;animation:fadeIn 1s ease-in-out;}
+    .container{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+    header{position:sticky;top:0;background:var(--bg);backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid rgba(100,116,139,.15);z-index:50;animation:slideDown 0.8s ease-out;}
+    .nav-wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:.75rem 0}
+    .brand{display:flex;align-items:center;gap:.75rem;font-weight:700;font-size:1.25rem;color:var(--txt-900);text-decoration:none;transition:transform 0.3s;}
+    .brand:hover{transform:scale(1.05);}
+    .logo-mark{width:64px;height:64px;border-radius:10px;object-fit:contain;transition:transform 0.5s;}
+    .logo-mark:hover{transform:rotate(360deg);}
+    .clock{font-variant-numeric:tabular-nums;color:var(--txt-500);font-size:.9rem;animation:pulse 2s infinite;white-space:nowrap;}
+
+    .menu{display:flex;gap:.5rem;flex-wrap:wrap}
+    .menu a{
+      font-size:1.1rem;
+      padding:0.5rem 0.75rem;
+      color:var(--txt-900);
+      font-weight:600;
+      text-decoration:none;
+      background:none;
+      border-radius:0;
+      transition:color 0.2s ease;
+    }
+    .menu a:hover,
+    .menu a[aria-current="page"]{
+      color:var(--brand-600);
+      background:none;
+      box-shadow:none;
+      transform:none;
+    }
+
+    .hamburger{display:none;cursor:pointer;background:none;border:none;font-size:1.6rem;color:var(--txt-700);padding:.25rem .5rem;border-radius:999px;}
+    .hamburger:hover{background:rgba(148,163,184,.15);}
+
+    #nav-toggle{display:none}
+
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:1rem;
+      margin-left:auto;
+    }
+
+    .settings-pill{
+      display:flex;
+      align-items:center;
+      gap:.35rem;
+      padding:.25rem .5rem;
+      border-radius:999px;
+      background:rgba(148,163,184,.12);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(148,163,184,.35);
+    }
+
+    .icon-button{
+      border:none;
+      background:transparent;
+      cursor:pointer;
+      font-size:1.1rem;
+      line-height:1;
+      padding:.25rem .45rem;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:background .2s, transform .15s;
+      color:var(--txt-700);
+    }
+
+    .icon-button:hover{
+      background:rgba(148,163,184,.25);
+      transform:translateY(-1px);
+    }
+
+    .language-select{
+      border:none;
+      background:transparent;
+      font-size:.9rem;
+      color:var(--txt-700);
+      padding:.15rem .25rem;
+      border-radius:999px;
+      cursor:pointer;
+      outline:none;
+    }
+
+    @media (max-width:780px){
+      .hamburger{display:block}
+      .nav-right{
+        gap:.5rem;
+      }
+      .clock{
+        display:none;
+      }
+      .menu{
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background:var(--bg);
+        flex-direction:column;
+        padding:1rem;
+        border-bottom:1px solid rgba(100,116,139,.15);
+        box-shadow:var(--shadow);
+        display:none;
+        animation:fadeInUp 0.5s;
+      }
+      #nav-toggle:checked ~ .menu{display:flex}
+    }
+
+    main{margin:3rem auto;max-width:900px;padding:0 1rem}
+    main h1,main h2,main h3{color:var(--brand-600);animation:fadeInLeft 1s;}
+    section{margin-bottom:2rem;padding:1.5rem;background:var(--bg-soft);border-radius:12px;box-shadow:var(--shadow);transition:transform 0.3s;}
+    section:hover{transform:translateY(-10px);}
+
+    @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+    @keyframes slideDown{from{transform:translateY(-100%);}to{transform:translateY(0);}}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    @keyframes fadeInLeft{from{opacity:0;transform:translateX(-20px);}to{opacity:1;transform:translateX(0);}}
+    @keyframes pulse{0%{opacity:1;}50%{opacity:0.5;}100%{opacity:1;}}
+  </style>
+  {% seo %}
+</head>
+<body>
+  <a href="#main" class="skip-link" data-i18n="skip.main">Skip to main content</a>
+
+  <div class="page-frame" data-aos="fade-up">
+    <header>
+      <div class="container nav-wrap">
+        <a class="brand" href="{{ '/' | relative_url }}">
+          <img src="https://cilect.org/wp-content/uploads/2022/02/e8a9daf6c69b11a16de2f018d02e530c1.png" alt="NTU Singapore Logo" class="logo-mark" aria-hidden="true">
+          <!-- Site title, language-aware -->
+          <span id="site-title" data-i18n="site.title">{{ site.title }}</span>
+        </a>
+
+        <div class="nav-right">
+          <div class="clock" id="live-clock" aria-label="Local time"></div>
+
+          <!-- Modern settings pill: theme + language -->
+          <div class="settings-pill" aria-label="Display and language settings">
+            <button
+              id="theme-toggle"
+              class="icon-button"
+              type="button"
+              aria-label="Toggle dark mode"
+            >
+              🌙
+            </button>
+
+            <select id="language-toggle" class="language-select" aria-label="Switch language">
+              <option value="en">EN</option>
+              <option value="bn">বাংলা</option>
+              <option value="zh">中文</option>
+            </select>
+          </div>
+
+          <label class="hamburger" for="nav-toggle" aria-label="Toggle menu">☰</label>
+          <input type="checkbox" id="nav-toggle">
+
+          <nav class="menu">
+            {% for item in site.nav %}
+              <!--
+                We derive a key from the nav title, e.g.
+                "Home" -> nav-home, "About Me" -> nav-about-me
+                Fill translations for these keys in JS.
+              -->
+              <a
+                href="{{ item.url | relative_url }}"
+                {% if page.url == item.url %}aria-current="page"{% endif %}
+                data-i18n="nav-{{ item.title | slugify }}"
+              >
+                {{ item.title }}
+              </a>
+            {% endfor %}
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1" data-aos="fade-in">
+      <div class="container">
+        <!-- Any static text inside your content can also use data-i18n in your markdown/HTML -->
+        {{ content }}
+      </div>
+    </main>
+
+    <footer style="padding:1.5rem 0;background:var(--bg-soft);border-top:1px solid rgba(100,116,139,.1);">
+      <div class="container" style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+        <!-- Icons row -->
+        <div style="display:flex;gap:1rem;margin-bottom:0.75rem;">
+          <!-- Email -->
+          <a href="mailto:{{ site.email }}" aria-label="Email"
+             style="width:40px;height:40px;border-radius:50%;background:#4a6bff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(74,107,255,.35);transition:all .3s;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+              <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.369l10 8.106 10-8.106v11.369h-20z"/>
+            </svg>
+          </a>
+
+          <!-- Google Scholar -->
+          <a href="https://scholar.google.com/citations?user=YOUR_ID_HERE" target="_blank" rel="noopener" aria-label="Google Scholar"
+             style="width:40px;height:40px;border-radius:50%;background:#4285F4;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(66,133,244,.35);transition:all .3s;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/>
+            </svg>
+          </a>
+
+          <!-- ResearchGate -->
+          <a href="https://www.researchgate.net/profile/Mahadeb-Mandal" target="_blank" rel="noopener" aria-label="ResearchGate"
+             style="width:40px;height:40px;border-radius:50%;background:#00CCBB;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(0,204,187,.35);transition:all .3s;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .50.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z"/>
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/mahadeb-mandal" target="_blank" rel="noopener" aria-label="LinkedIn"
+             style="width:40px;height:40px;border-radius:50%;background:#0a66c2;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(10,102,194,.35);transition:all .3s;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/mahadeb-ai" target="_blank" rel="noopener" aria-label="GitHub"
+             style="width:40px;height:40px;border-radius:50%;background:#181717;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 22px rgba(24,23,23,.55);transition:all .3s;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+          </a>
+        </div>
+
+        <style>
+          footer a:hover{
+            transform:translateY(-8px) scale(1.1);
+            box-shadow:0 18px 40px rgba(0,0,0,.45) !important;
+          }
+        </style>
+
+        <!-- Footer text -->
+        <div style="color:var(--txt-500);font-size:.9rem;margin-top:.75rem;padding-top:.75rem;border-top:1px solid rgba(100,116,139,.1);">
+          <span id="footer-line-1" data-i18n="footer.line1">
+            © {{ 'now' | date: '%Y' }} Mahadeb Mandal. All rights reserved.
+          </span><br>
+          <span id="footer-line-2" data-i18n="footer.line2">
+            Last updated {{ site.time | date: "November %d, %Y" }}
+          </span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration:800,
+      easing:'ease-in-out',
+      once:true
+    });
+  </script>
+
+  <script>
+    // ===== Live Clock =====
+    const clockEl = document.getElementById('live-clock');
+    if (clockEl){
+      const tick = () => {
+        clockEl.textContent = new Date().toLocaleTimeString([], {
+          hour:'2-digit',
+          minute:'2-digit'
+        });
+      };
+      tick();
+      setInterval(tick, 1000);
+    }
+
+    // ===== Theme Toggle (Light / Dark) =====
+    const root = document.documentElement;
+    const themeBtn = document.getElementById('theme-toggle');
+    const THEME_KEY = 'mm-theme';
+
+    function applyTheme(mode){
+      root.dataset.theme = mode;
+      if (themeBtn){
+        themeBtn.innerHTML = mode === 'dark' ? '☀️' : '🌙';
+        themeBtn.setAttribute(
+          'aria-label',
+          mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+        );
+      }
+      const metaTheme = document.querySelector('meta[name="theme-color"]');
+      if (metaTheme){
+        metaTheme.setAttribute('content', mode === 'dark' ? '#0b1020' : '#4a6bff');
+      }
+    }
+
+    const savedTheme =
+      localStorage.getItem(THEME_KEY) ||
+      (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light');
+
+    applyTheme(savedTheme);
+
+    if (themeBtn){
+      themeBtn.addEventListener('click', () => {
+        const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem(THEME_KEY, next);
+        applyTheme(next);
+      });
+    }
+
+    // ===== Language Toggle (EN / বাংলা / 中文) =====
+    const langSelect = document.getElementById('language-toggle');
+    const LANG_KEY = 'mm-lang';
+
+    // Central translation dictionary.
+    // Add any new data-i18n keys here.
+    const translations = {
+      en: {
+        'skip.main': 'Skip to main content',
+        'site.title': '{{ site.title }}',
+        // Nav example keys: adjust titles / add more as needed
+        // If your nav has titles "Home", "Research", "CV", etc:
+        'nav-home': 'Home',
+        'nav-research': 'Research',
+        'nav-cv': 'CV',
+        'nav-contact': 'Contact',
+        'footer.line1': '© {{ "now" | date: "%Y" }} Mahadeb Mandal. All rights reserved.',
+        'footer.line2': 'Last updated {{ site.time | date: "November %d, %Y" }}'
+      },
+      bn: {
+        'skip.main': 'মূল অংশে যান',
+        'site.title': 'মহাদেব মণ্ডল',
+        'nav-home': 'হোম',
+        'nav-research': 'গবেষণা',
+        'nav-cv': 'সিভি',
+        'nav-contact': 'যোগাযোগ',
+        'footer.line1': '© {{ "now" | date: "%Y" }} মহাদেব মণ্ডল। সর্বস্বত্ব সংরক্ষিত।',
+        'footer.line2': 'সর্বশেষ হালনাগাদ {{ site.time | date: "November %d, %Y" }}'
+      },
+      zh: {
+        'skip.main': '跳转到主体内容',
+        'site.title': 'Mahadeb Mandal',
+        'nav-home': '主页',
+        'nav-research': '科研',
+        'nav-cv': '简历',
+        'nav-contact': '联系',
+        'footer.line1': '© {{ "now" | date: "%Y" }} Mahadeb Mandal。保留所有权利。',
+        'footer.line2': '最后更新 {{ site.time | date: "November %d, %Y" }}'
+      }
+    };
+
+    function applyLanguage(lang){
+      const dict = translations[lang] || translations.en;
+      // Update all elements with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const text = dict[key];
+        if (typeof text !== 'undefined'){
+          el.textContent = text;
+        }
+      });
+      document.documentElement.lang = lang;
+      if (langSelect){ langSelect.value = lang; }
+    }
+
+    const savedLang = localStorage.getItem(LANG_KEY) || 'en';
+    applyLanguage(savedLang);
+
+    if (langSelect){
+      langSelect.addEventListener('change', (e) => {
+        const lang = e.target.value;
+        localStorage.setItem(LANG_KEY, lang);
+        applyLanguage(lang);
+      });
+    }
+  </script>
+</body>
+</html>
