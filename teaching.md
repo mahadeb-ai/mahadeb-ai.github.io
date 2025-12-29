@@ -45,8 +45,8 @@ permalink: /teaching/
           <span class="teach-course-code">MA1812</span>
           <span class="teach-tag">Teaching Assistant</span>
         </div>
-        <h3 class="teach-course-title">Discrete Mathematics &amp; XXX</h3>
-        <p class="teach-course-meta">Nanyang Technological University · Spring 2025</p>
+        <h3 class="teach-course-title">Discrete Mathematics; XXX</h3>
+        <p class="teach-course-meta">Instructor:Asst Prof Gary Greaves · Nanyang Technological University · Spring 2025</p>
       </article>
 
       <article class="teach-course">
@@ -55,7 +55,7 @@ permalink: /teaching/
           <span class="teach-tag">Teaching Assistant</span>
         </div>
         <h3 class="teach-course-title">Algorithms and Computing</h3>
-        <p class="teach-course-meta">Nanyang Technological University · Spring 2025</p>
+        <p class="teach-course-meta">Instructor: Assoc Prof Wu Hongjun · Nanyang Technological University · Spring 2025</p>
       </article>
 
       <article class="teach-course">
