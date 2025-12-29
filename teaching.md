@@ -45,7 +45,7 @@ permalink: /teaching/
           <span class="teach-course-code">MA1812</span>
           <span class="teach-tag">Teaching Assistant</span>
         </div>
-        <h3 class="teach-course-title">Discrete Mathematics; XXX</h3>
+        <h3 class="teach-course-title">Discrete Mathematics</h3>
         <p class="teach-course-meta">Instructor: Asst Prof Gary Greaves · Nanyang Technological University · Spring 2025</p>
       </article>
 
