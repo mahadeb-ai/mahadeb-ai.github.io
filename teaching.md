@@ -36,26 +36,26 @@ permalink: /teaching/
   <section class="teach-card">
     <div class="teach-section-header">
       <h2>Courses Assisted</h2>
-      <p class="teach-section-subtitle">Formal teaching roles across undergraduate and advanced courses.</p>
+      <p class="teach-section-subtitle">Teaching roles across undergraduate and advanced courses.</p>
     </div>
 
     <div class="teach-grid">
       <article class="teach-course">
         <div class="teach-course-header">
-          <span class="teach-course-code">MAXXX</span>
+          <span class="teach-course-code">MA1812</span>
           <span class="teach-tag">Teaching Assistant</span>
         </div>
-        <h3 class="teach-course-title">XXX &amp; XXX</h3>
-        <p class="teach-course-meta">Nanyang Technological University · 20XX</p>
+        <h3 class="teach-course-title">Discrete Mathematics &amp; XXX</h3>
+        <p class="teach-course-meta">Nanyang Technological University · Spring 2025</p>
       </article>
 
       <article class="teach-course">
         <div class="teach-course-header">
-          <span class="teach-course-code">MAXXXX</span>
+          <span class="teach-course-code">MA1403</span>
           <span class="teach-tag">Teaching Assistant</span>
         </div>
-        <h3 class="teach-course-title">XXXX</h3>
-        <p class="teach-course-meta">Nanyang Technological University · 20XX</p>
+        <h3 class="teach-course-title">Algorithms and Computing</h3>
+        <p class="teach-course-meta">Nanyang Technological University · Spring 2025</p>
       </article>
 
       <article class="teach-course">
