@@ -77,7 +77,7 @@ permalink: /teaching/
     </div>
 
     <ul class="teach-list">
-      <li><span class="teach-bullet-dot"></span> Lab Captain</li>
+      <li><span class="teach-bullet-dot"></span>MAS Lab Captain for AY25/26 (SEMESTER 2)</li>
     </ul>
   </section>
 
