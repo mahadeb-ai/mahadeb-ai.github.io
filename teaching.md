@@ -69,7 +69,18 @@ permalink: /teaching/
     </div>
   </section>
 
- 
+   <!-- Other Duties -->
+  <section class="teach-card">
+    <div class="teach-section-header">
+      <h2>Other Duties</h2>
+      <p class="teach-section-subtitle">Additional responsibilities.</p>
+    </div>
+
+    <ul class="teach-list">
+      <li><span class="teach-bullet-dot"></span> Lab Captain</li>
+    </ul>
+  </section>
+
   <!-- Teaching Philosophy -->
   <section class="teach-card teach-philosophy">
     <div class="teach-section-header">
