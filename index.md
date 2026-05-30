@@ -195,7 +195,7 @@ last_modified_at: 2025-09-01
     left: 0;
     width: 13vw;
     height: 15vh;
-    background-image: url('/assets/images/NTU_logo1.png');
+    background-image: url('/assets/images/ntu_logo.png');
     background-repeat: no-repeat;
     background-position: center 95%;
     background-size: 55px;
