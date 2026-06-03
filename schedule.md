@@ -365,13 +365,14 @@ robots: noindex
 <script>
 /** 1) Your Firebase config (unchanged) */
 const firebaseConfig = {
-  apiKey: "AIzaSyCRuMGHuEAtiYdfrXS4WBYAEFz_0CPsS9o",
-  authDomain: "mahadeb-webpage.firebaseapp.com",
-  projectId: "mahadeb-webpage",
-  storageBucket: "mahadeb-webpage.firebasestorage.app",
-  messagingSenderId: "570966202780",
-  appId: "1:570966202780:web:e58f1627e4e44d18131059",
-  measurementId: "G-YJVL46NBRG"
+  apiKey: "AIzaSyCOyayGUYBREEok4rTLJIQAv-8iIvJn-VE",
+  authDomain: "mahadeb-schedule.firebaseapp.com",
+  databaseURL: "https://mahadeb-schedule-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "mahadeb-schedule",
+  storageBucket: "mahadeb-schedule.firebasestorage.app",
+  messagingSenderId: "644636693352",
+  appId: "1:644636693352:web:816f7105c4158165a1fcdd",
+  measurementId: "G-46S6QYBKX3"
 };
 /** 2) Init Firebase */
 firebase.initializeApp(firebaseConfig);
